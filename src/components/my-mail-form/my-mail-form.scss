@@ -1,0 +1,21 @@
+@import "../../styles/colors.scss";
+@import "../../styles/typography.scss";
+
+.mail-form{
+    display: flex;
+    max-width: 60rem;
+    flex-direction: column;
+    gap: 2.5rem;
+    background-color: $color-white;
+    border-radius: $roundings;
+    padding: 4rem 5rem;
+
+    h2{
+        @extend .font-h2;
+        color: $color-black;
+    }
+
+    button {
+        margin-top: 1rem;
+    }
+}

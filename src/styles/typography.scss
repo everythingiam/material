@@ -1,0 +1,124 @@
+html {
+    /* 10px */
+    font-size: 62.5%;
+}
+
+$fontsize-h1: 4.2rem;
+$fontsize-h1-poster: 4rem;
+$fontsize-h1-hero: 35rem;
+$fontsize-h2: 2.4rem;
+$fontsize-p1-hero: 2rem;
+$fontsize-p1-medium: 1.8rem;
+$fontsize-p1: 1.8rem;
+$fontsize-p2: 1.6rem;
+$fontsize-p3: 1.4rem;
+$fontsize-button: 1.4rem;
+$fontsize-filters: 1.5rem;
+$fontsize-label: 1.3rem;
+
+$fontweight-light: 300;
+$fontweight-regular: 400;
+$fontweight-medium: 500;
+$fontweight-extrabold: 800;
+
+$paddings: 3rem;
+$roundings: 0.8rem;
+
+@media (min-width: 1300px) {
+  $paddings: 10rem !default;
+  html {
+    font-size: 65%;
+  }
+}
+
+@font-face {
+    font-family: 'TTHoves';
+    font-weight: $fontweight-light; // Light
+    src: url('/src/assets/font/TTHoves-Light.ttf') format('truetype');
+  }
+  
+@font-face {
+  font-family: 'TTHoves';
+  font-weight: $fontweight-regular; // Regular
+  src: url('/src/assets/font/TTHoves-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'TTHoves';
+  font-weight: $fontweight-medium; // Medium
+  src: url('/src/assets/font/TTHoves-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'TTHoves';
+    font-weight: $fontweight-extrabold; // ExtraBold
+    src: url('/src/assets/font/TTHoves-ExtraBold.ttf') format('truetype');
+}
+
+.font-h1{
+    font-family: "TTHoves";
+    font-weight: $fontweight-medium;
+    font-size: $fontsize-h1;
+}
+.font-h1-poster{
+    font-family: "TTHoves";
+    font-weight: $fontweight-medium;
+    font-size: $fontsize-h1-poster;
+    line-height: 107%;
+}
+.font-h1-hero{
+    font-family: "TTHoves";
+    font-weight: $fontweight-regular;
+    font-size: $fontsize-h1-hero;
+}
+.font-h2{
+    font-family: "TTHoves";
+    font-weight: $fontweight-medium;
+    font-size: $fontsize-h2;
+}
+.font-p1-hero{
+    font-family: "TTHoves";
+    font-weight: $fontweight-light;
+    font-size: $fontsize-p1-hero;
+}
+.font-p1-medium{
+    font-family: "TTHoves";
+    font-weight: $fontweight-medium;
+    font-size: $fontsize-p1-medium;
+}
+.font-p1{
+    font-family: "TTHoves";
+    font-weight: $fontweight-regular;
+    font-size: $fontsize-p1;
+    line-height: 150%;
+}
+.font-p2{
+    font-family: "TTHoves";
+    font-weight: $fontweight-regular;
+    font-size: $fontsize-p2;
+}
+.font-p3{
+    font-family: "TTHoves";
+    font-weight: $fontweight-regular;
+    font-size: $fontsize-p3;
+}
+.font-button{
+    font-family: "TTHoves";
+    font-weight: $fontweight-regular;
+    font-size: $fontsize-button;
+}
+.font-filters{
+    font-family: "TTHoves";
+    font-weight: $fontweight-regular;
+    font-size: $fontsize-filters;
+    text-transform: uppercase;
+}
+.font-label{
+    font-family: "TTHoves";
+    font-weight: $fontweight-regular;
+    font-size: $fontsize-label;
+    text-transform: uppercase;
+}
+
+
+

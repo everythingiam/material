@@ -1,0 +1,60 @@
+@import "../../styles/colors.scss";
+@import "../../styles/typography.scss";
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  
+  width: 100%;
+  // max-width: 320px;
+
+  label {
+    @extend .font-label;
+    font-size: $fontsize-label;
+    color: $color-black;
+    opacity: 0.5;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+  }
+
+  input {
+    @extend .font-p3;
+    padding-left: 1.6rem;
+    font-size: $fontsize-p3;
+    border: 0.5px solid rgba($color: $color-black, $alpha: 0.3);
+    height: 4.5rem;
+    background-color: rgba($color: $color-black, $alpha: 0.04);
+    border-radius: $roundings;
+
+    &.success {
+      border-color: #6EAD48;
+    }
+
+    &.error {
+      border-color: #E54E1F;
+    }
+
+    &:disabled {
+      background-color: #f0f0f0;
+      cursor: not-allowed;
+    }
+
+    &:hover {
+      border: 1px solid rgba($color: $color-black, $alpha: 0.4);
+    }
+    &:focus {
+        outline: 2px solid rgba(37, 37, 213, 0.2);
+        border: 1px solid $color-accent;
+    }
+  }
+
+  span {
+    font-size: 0.75rem;
+    color: #a0a0a0;
+    margin-top: 1.5rem;
+  }
+
+  .error-message {
+    color: #E54E1F;
+  }
+}

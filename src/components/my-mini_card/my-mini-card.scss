@@ -1,0 +1,95 @@
+@import "../../styles/colors.scss";
+@import "../../styles/typography.scss";
+
+.product-card {
+  overflow: hidden;
+
+  .product-card-container {
+    background: linear-gradient($color-black, #1b1b1b);
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 0.8rem;
+    padding: 4%;
+    transition: padding 200ms ease-in-out;
+
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+  
+  .product-info {
+    padding-top: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+  
+  .product-meta {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .separator {
+    width: 100%;
+    height: 0.07rem;
+    background-color: rgba($color: $color-black, $alpha: 0.15);
+    transition: background-color 200ms ease-in-out; 
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+  h2 {
+    @extend .font-p1-medium;
+    color: $color-black;
+    transition: color 200ms ease-in-out; 
+  }
+
+  p {
+    transition: color 200ms ease-in-out; 
+  }
+
+  .author {
+    @extend .font-p3;
+    color: rgba($color: $color-black, $alpha: 0.5);
+  }
+
+  .price {
+    @extend .font-p1-medium;
+    color: $color-black;
+  }
+
+  &:hover {
+    transition: 900ms;
+
+    h2,
+    p {
+      color: $color-accent;
+    }
+
+    .product-card-container {
+      padding: 3%;
+    }
+
+    .separator {
+      background-color: rgba($color: $color-accent, $alpha: 0.5);
+    }
+  }
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #333;
+}

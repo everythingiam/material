@@ -1,0 +1,21 @@
+@import "../../styles/colors.scss";
+@import "../../styles/typography.scss";
+
+.h1p{
+    width: 100%;
+    padding: 5.4rem $paddings 4rem $paddings;
+    .wrap{
+        max-width: 63%;
+        display: flex;
+        flex-direction: column;
+    }
+    h1{
+        @extend .font-h1;
+        color: $color-black;
+    }
+    p{
+        @extend .font-p1;
+        margin-top: 1.45rem;
+        color: rgba($color: $color-black, $alpha: 0.8);
+    }
+}

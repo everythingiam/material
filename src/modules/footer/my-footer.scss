@@ -1,0 +1,55 @@
+@import "../../styles/colors.scss";
+@import "../../styles/typography.scss";
+
+#footer {
+  height: 40rem;
+  background-color: $color-black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+
+  svg {
+    width: 98%;
+    path {
+      fill: transparent;
+      transition: fill .9s cubic-bezier(.5,0,0.5,1);
+    }
+  
+    &:hover {
+      path {
+      fill: $color-white;
+      opacity: 1;
+      transition: fill .9s cubic-bezier(.5,0,0.5,1);
+      }
+    }
+  }
+  .top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 $paddings;
+  
+  }
+  article{
+      margin-top: 5rem;
+  }
+  .wrap{
+    display: flex;
+    justify-content: space-between;
+  }
+  .long{
+    width: 35%;
+  
+  }
+  .label{
+      @extend .font-p3;
+      color: rgba($color: $color-white, $alpha: 0.5);
+      margin-bottom: 0.6rem;
+  }
+  .value{
+      @extend .font-p2;
+      color: $color-white;
+  }
+}

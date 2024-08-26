@@ -1,0 +1,12 @@
+@import "../../styles/colors.scss";
+@import "../../styles/typography.scss";
+
+.mail{
+    background-image: url('../../assets/img/mail.png');
+    background-size: cover;
+    height: 63rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 $paddings;
+}
