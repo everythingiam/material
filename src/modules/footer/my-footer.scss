@@ -53,3 +53,9 @@
       color: $color-white;
   }
 }
+
+@media (max-width: 800px){
+  .top{
+    flex-direction: column;
+  }
+}

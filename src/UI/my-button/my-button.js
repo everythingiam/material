@@ -2,6 +2,7 @@ import './my-button.scss';
 
 function create(text, mode, custom) {
     const btn = document.createElement('button');
+    btn.classList.add('normal')
 
     setText(btn, text);
     setMode(btn, mode, custom);

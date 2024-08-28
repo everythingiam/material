@@ -5,6 +5,9 @@ function create() {
   const header = document.createElement("header");
   header.id = "header";
   header.innerHTML = headerHTML;
+
+
+
   return header;
 }
 

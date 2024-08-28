@@ -1,0 +1,97 @@
+@import "../../styles/colors.scss";
+@import "../../styles/typography.scss";
+
+.popupWhole {
+  background-color: rgba(97, 97, 97, 0.5);
+  position: fixed;
+  inset: 0;
+  z-index: 101;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  justify-content: center;
+  transition: all 0.2s;
+  display: none;
+  backdrop-filter: blur(15px);
+
+  .dialog-popup {
+    width: 100%;
+    max-width: 96rem;
+    background-color: $color-white;
+    position: relative;
+    border-radius: $roundings;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 5rem auto;
+
+    h2 {
+      @extend .font-h2;
+    }
+
+    .right-side {
+      padding: 4rem;
+    }
+    span {
+      transition: 200ms;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .left-side {
+      background-image: url(/src/assets/img/login.png);
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+      border-radius: $roundings;
+      display: flex;
+      align-items: flex-end;
+      padding: 4rem;
+
+      p,
+      span {
+        @extend .font-p2;
+        color: $color-white;
+      }
+      span:hover {
+        color: rgba($color-white, 0.6);
+      }
+    }
+  }
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    gap: 2.65rem;
+    margin-top: 2.65rem;
+
+    span {
+      @extend .font-p2;
+      color: $color-black;
+      align-self: flex-end;
+      cursor: pointer;
+    }
+    span:hover {
+      color: rgba($color-black, 0.6);
+    }
+  }
+
+  .down {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+
+    p {
+      @extend .font-label;
+      align-self: center;
+      color: rgba($color-black, 0.5);
+    }
+
+    button {
+      margin-top: 1.6rem;
+    }
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
