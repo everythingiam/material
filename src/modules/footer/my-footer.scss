@@ -1,5 +1,5 @@
-@import "../../styles/colors.scss";
-@import "../../styles/typography.scss";
+@import '../../styles/common.scss';
+
 
 #footer {
   height: 40rem;
@@ -45,7 +45,7 @@
   }
   .label{
       @extend .font-p3;
-      color: rgba($color: $color-white, $alpha: 0.5);
+      color: rgba($color-white, 0.5);
       margin-bottom: 0.6rem;
   }
   .value{

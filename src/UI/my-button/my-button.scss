@@ -1,8 +1,8 @@
 @use "sass:math";
-@import '../../styles/colors.scss';
-@import '../../styles/typography.scss';
+@import '../../styles/common.scss';
 
-button {
+
+.button {
   @extend .font-button;
   background-color: $color-accent;
   border-radius: $roundings;
@@ -11,6 +11,8 @@ button {
   border: none;
   transition: 200ms;
   cursor: pointer;
+  text-decoration: none;
+  
   &:hover {
     background-color: $color-button-hover;
     border-radius: math.div($roundings, 3);
@@ -32,7 +34,7 @@ button {
   }
 }
 
-.button-outline {
+.outline {
   background-color: $color-white;
   color: $color-accent;
   border: 1px solid $color-accent;
@@ -59,4 +61,7 @@ button {
 .custom{
   width: 100%;
   height: 4.88rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

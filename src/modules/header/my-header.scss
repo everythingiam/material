@@ -1,13 +1,12 @@
-@import "../../styles/colors.scss";
-@import "../../styles/typography.scss";
+@import "../../styles/common.scss";
 
 #header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1.7rem 3rem;
-  background-color: $color-white; 
-  border-bottom: 0.07rem solid rgba($color: $color-black, $alpha: 0.2);
+  background-color: $color-white;
+  border-bottom: 0.07rem solid rgba($color-black, 0.2);
   filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.12));
   position: sticky;
   top: 0;
@@ -19,7 +18,12 @@
     font-family: "TTHoves";
     font-size: 24px;
     font-weight: $fontweight-extrabold;
-    color: $color-accent; 
+    color: $color-accent;
+    text-decoration: none;
+    transition: 200ms;
+    &:hover{
+      color: $color-button-hover;
+    }
   }
 
   nav {
@@ -27,6 +31,17 @@
     justify-content: space-between;
     width: 42%;
     align-self: center;
+
+    a {
+      @extend .font-button;
+      text-decoration: none;
+      transition: 200ms;
+      color: $color-black;
+      &:hover {
+        color: rgba($color-black, 0.6);
+      }
+    }
+    
   }
 
   .icons-wrapper {
@@ -44,34 +59,8 @@
   .separator {
     width: 1px;
     height: 32px;
-    background-color: rgba($color: $color-black, $alpha: 0.12); 
+    background-color: rgba($color-black, 0.12);
     margin: 0 5px;
-  }
-
-  a {
-    @extend .font-button;
-    color: $color-accent;
-    text-decoration: none;
-    transition: 200ms;
-
-    &:hover {
-      color: $color-button-hover;
-    }
-
-    &:active {
-      color: $color-button-pressed;
-      border-radius: 4px;
-    }
-
-    &:disabled {
-      color: $color-button-disable;
-      opacity: 40%;
-      cursor: not-allowed;
-    }
-
-    &:focus {
-      outline: 2px solid rgba(37, 37, 213, 0.2);
-    }
   }
 
   .button-area {
@@ -79,6 +68,7 @@
     align-items: center;
     gap: 24px;
   }
+
   .left {
     display: flex;
     width: 35%;
@@ -86,8 +76,8 @@
   }
 }
 
-@media (max-width: 800px){
-  .button-area{
+@media (max-width: 800px) {
+  .button-area {
     flex-direction: column;
   }
 }

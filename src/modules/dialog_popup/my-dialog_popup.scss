@@ -1,0 +1,117 @@
+@import "../../styles/common.scss";
+
+dialog {
+  background-color: rgba(97, 97, 97, 0.5);
+  position: fixed;
+  inset: 0;
+  z-index: 101;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  justify-content: center;
+  transition: all 0.4s ease;
+  display: none;
+  align-items: center;
+  backdrop-filter: blur(15px);
+  width: 100%;
+  height: auto;
+  border: 0;
+  padding: 5rem 1rem;
+
+  .dialog-popup {
+    width: 100%;
+    max-width: 96rem;
+    background-color: $color-white;
+    position: relative;
+    border-radius: $roundings;
+    display: none;
+    min-height: 54rem;
+    grid-template-columns: repeat(2, 1fr);
+
+    .left-side {
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+      border-radius: $roundings;
+      display: flex;
+      align-items: flex-end;
+      padding: 4rem;
+
+      &.one {
+        background-image: url(/src/assets/img/login.png);
+      }
+      &.two {
+        background-image: url(/src/assets/img/register.png);
+      }
+
+      p {
+        @extend .font-p2;
+        color: $color-white;
+      }
+      span {
+        @extend .font-p2;
+        transition: 200ms;
+        cursor: pointer;
+        text-decoration: underline;
+        color: $color-white;
+
+        &:hover {
+          color: rgba($color-white, 0.6);
+        }
+      }
+    }
+
+    .right-side, form {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+    .password-wrap{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+    }
+
+    .right-side {
+      padding: 4rem;
+
+      h2 {
+        @extend .font-h2;
+      }
+
+      p {
+        @extend .font-label;
+        align-self: center;
+        color: rgba($color-black, 0.5);
+        margin-top: 2rem;
+        margin-bottom: -1rem;
+      }
+
+      span {
+        @extend .font-p2;
+        color: $color-black;
+        align-self: flex-end;
+        transition: 200ms;
+        cursor: pointer;
+        text-decoration: underline;
+        margin-top: -0.5rem;
+
+        &:hover {
+          color: rgba($color-black, 0.6);
+        }
+      }
+
+      .normal {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .active {
+    display: grid;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}

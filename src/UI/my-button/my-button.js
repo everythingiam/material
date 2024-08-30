@@ -1,34 +1,46 @@
-import './my-button.scss';
+import "./my-button.scss";
 
-function create(text, mode, custom) {
-    const btn = document.createElement('button');
-    btn.classList.add('normal')
+//UI-компонент "Кнопка"
 
-    setText(btn, text);
-    setMode(btn, mode, custom);
-    // setSize(btn, width, height);
+//в принципе этим можно не пользоваться
+function createButton(text, mode, isCustom) { 
+  const btn = document.createElement("button");
+  btn.classList.add("button");
 
-    return btn;
+  setText(btn, text);
+  setMode(btn, mode, isCustom);
+
+  return btn;
+}
+
+function createA(text, mode, isCustom, link){
+  const a = document.createElement('a');
+  a.classList.add('button')
+
+  setText(a, text);
+  setMode(a, mode, isCustom);
+  setLink(a, link);
+
+  return a;
 }
 
 function setText(btn, text) {
-    btn.textContent = text;
+  btn.textContent = text;
 }
 
-// function setSize(btn, width, height) {
-//     if (width) btn.style.width = width;
-//     if (height) btn.style.height = height;
-// }
-
 function setMode(btn, mode, custom) {
-    if (mode === 'outline') {
-        btn.classList.add('button-outline');
-    }
-    if (custom) {
-        btn.classList.add('custom')
-    }
+  btn.classList.add(mode);
+  
+  if (custom) {
+    btn.classList.add("custom");
+  }
+}
+
+function setLink(a, link){
+  a.href = link;
 }
 
 export default {
-    create
+  createButton,
+  createA
 };

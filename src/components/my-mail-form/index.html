@@ -1,10 +1,12 @@
 <h2>Необычные новости в мире дизайна и классные находки!</h2>
-<form class = "input-group" action="">
-    <label>Имя</label>
-    <input type="text" placeholder="Введите имя">
+<form action="">
+    <div class="set">
+        <label for="name">Имя</label>
+        <input name="name" type="text" placeholder="Введите имя" required>
+    </div>
+    <div class="set">
+        <label for="mail">Почта</label>
+        <input name="mail" type="text" placeholder="Введите почту" required>
+    </div>
+    <button class="button custom" type="submit">Подписаться на рассылку</button>
 </form>
-<form class = "input-group" action="">
-    <label>Почта</label>
-    <input type="text" placeholder="Введите почту">
-</form>
-<button class="custom">Подписаться на рассылку</button>

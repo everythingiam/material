@@ -1,5 +1,5 @@
-@import "../../styles/colors.scss";
-@import "../../styles/typography.scss";
+@import '../../styles/common.scss';
+
 
 .product-card {
   overflow: hidden;
@@ -35,7 +35,7 @@
   .separator {
     width: 100%;
     height: 0.07rem;
-    background-color: rgba($color: $color-black, $alpha: 0.15);
+    background-color: rgba($color-black, 0.15);
     transition: background-color 200ms ease-in-out; 
   }
   
@@ -55,7 +55,7 @@
 
   .author {
     @extend .font-p3;
-    color: rgba($color: $color-black, $alpha: 0.5);
+    color: rgba($color-black, 0.5);
   }
 
   .price {
@@ -76,7 +76,7 @@
     }
 
     .separator {
-      background-color: rgba($color: $color-accent, $alpha: 0.5);
+      background-color: rgba($color-accent, 0.5);
     }
   }
 }

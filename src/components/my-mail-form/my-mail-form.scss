@@ -1,5 +1,4 @@
-@import "../../styles/colors.scss";
-@import "../../styles/typography.scss";
+@import '../../styles/common.scss';
 
 .mail-form{
     display: flex;
@@ -18,4 +17,9 @@
     button {
         margin-top: 1.8rem;
     }
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
 }

@@ -1,5 +1,5 @@
-@import "../../styles/colors.scss";
-@import "../../styles/typography.scss";
+@import '../../styles/common.scss';
+
 
 .h1p{
     width: 100%;
@@ -16,6 +16,6 @@
     p{
         @extend .font-p1;
         margin-top: 1.45rem;
-        color: rgba($color: $color-black, $alpha: 0.8);
+        color: rgba($color-black, 0.8);
     }
 }
