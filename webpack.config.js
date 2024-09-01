@@ -8,6 +8,8 @@ module.exports = {
   entry: {
     home: "./src/index.js",
     catalog: "./src/pages/catalog/index.js",
+    favourites: "./src/pages/favourites/index.js",
+    cart: "./src/pages/cart/index.js",
   },
   output: {
     filename: "[name].bundle.js",
@@ -30,6 +32,16 @@ module.exports = {
       template: "./src/pages/catalog/index.html",
       filename: "catalog/index.html", 
       chunks: ["catalog"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/favourites/index.html",
+      filename: "favourites/index.html", 
+      chunks: ["favourites"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/cart/index.html",
+      filename: "cart/index.html", 
+      chunks: ["cart"],
     }),
     new webpack.ProvidePlugin({
       typography: './src/styles/typography.scss',

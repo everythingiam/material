@@ -21,7 +21,7 @@
     color: $color-accent;
     text-decoration: none;
     transition: 200ms;
-    &:hover{
+    &:hover {
       color: $color-button-hover;
     }
   }
@@ -41,7 +41,6 @@
         color: rgba($color-black, 0.6);
       }
     }
-    
   }
 
   .icons-wrapper {
@@ -55,6 +54,31 @@
     background-size: contain;
     background-repeat: no-repeat;
   }
+  svg {
+    cursor: pointer;
+
+    path {
+      transition: $transitions;
+    }
+
+    &:hover {
+      path {
+        stroke: $color-accent;
+      }
+    }
+  }
+
+  // svg{
+  //   path {
+  //     stroke: #2A2B2C;
+  //     transition: stroke 0.3s ease; /* Плавный переход для обводки */
+  //   }
+
+  //   path:hover {
+  //     stroke: #FF5733; /* Цвет обводки при наведении */
+  //   }
+
+  // }
 
   .separator {
     width: 1px;

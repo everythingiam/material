@@ -21,6 +21,15 @@ const posters = [
     myMini_card.create(),
     myMini_card.create(),
     myMini_card.create(),
+    myMini_card.create(),
+    myMini_card.create(),
+    myMini_card.create(),
+    myMini_card.create(),
+    myMini_card.create(),
+    myMini_card.create(),
+    myMini_card.create(),
+    myMini_card.create(),
+    myMini_card.create(),
 ]
 
 const body = document.querySelector('body');

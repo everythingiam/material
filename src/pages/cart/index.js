@@ -21,21 +21,12 @@ const posters = [
     myMini_card.create(),
     myMini_card.create(),
     myMini_card.create(),
-    myMini_card.create(),
-    myMini_card.create(),
-    myMini_card.create(),
-    myMini_card.create(),
-    myMini_card.create(),
-    myMini_card.create(),
-    myMini_card.create(),
-    myMini_card.create(),
-    myMini_card.create(),
 ]
 
 const body = document.querySelector('body');
 
 body.appendChild(myHeader.create())
-body.appendChild(myH1_and_p.create('Избранное'))
+body.appendChild(myH1_and_p.create('Корзина'))
 body.appendChild(myPoster_bar.create(posters))
 body.appendChild(myFooter.create())
 

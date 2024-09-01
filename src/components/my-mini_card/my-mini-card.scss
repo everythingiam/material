@@ -56,6 +56,10 @@
   .author {
     @extend .font-p3;
     color: rgba($color-black, 0.5);
+    
+    &:hover{
+      text-decoration: underline;
+    }
   }
 
   .price {
