@@ -41,7 +41,7 @@ function addCloseLogic(popupSystem) {
   });
 }
 
-function setAsOpener(popupSystem, type, button) {
+function setButtonAsOpener(popupSystem, type, button) {
   if (button) {
     button.addEventListener("click", () => openPopup(popupSystem, type));
   } else {
@@ -70,13 +70,15 @@ function setLinkAsOpener(popupSystem, type, link) {
 }
 
 function openPopup(popupSystem, type) {
-  popupSystem.style.display = "flex";
+  popupSystem.style.opacity = "1";
+  popupSystem.style.pointerEvents = "all";
   document.body.classList.add("no-scroll");
   popupSystem.querySelector(`.${type}`).classList.add('active');
 }
 
 function closeAll(popupSystem) {
-  popupSystem.style.display = "none";
+  popupSystem.style.opacity = "0";
+  popupSystem.style.pointerEvents = "none";
   document.body.classList.remove("no-scroll");
   popupSystem.querySelectorAll('.dialog-popup.active').forEach(dialog => {
     dialog.classList.remove('active');
@@ -85,5 +87,5 @@ function closeAll(popupSystem) {
 
 export default {
   create,
-  setAsOpener,
+  setButtonAsOpener,
 };

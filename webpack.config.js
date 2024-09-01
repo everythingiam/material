@@ -10,6 +10,7 @@ module.exports = {
     catalog: "./src/pages/catalog/index.js",
     favourites: "./src/pages/favourites/index.js",
     cart: "./src/pages/cart/index.js",
+    poster: "./src/pages/posters/american-architecture/index.js"
   },
   output: {
     filename: "[name].bundle.js",
@@ -42,6 +43,11 @@ module.exports = {
       template: "./src/pages/cart/index.html",
       filename: "cart/index.html", 
       chunks: ["cart"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/posters/american-architecture/index.html",
+      filename: "posters/american-architecture/index.html", 
+      chunks: ["poster"],
     }),
     new webpack.ProvidePlugin({
       typography: './src/styles/typography.scss',

@@ -13,8 +13,8 @@ function create() {
   const registerBtn = header.querySelector('.registerBtn');
   // const forgotBtn = header.querySelector('.forgotBtn');
 
-  myDialog_popup.setAsOpener(dialogs, 'login', loginBtn);
-  myDialog_popup.setAsOpener(dialogs, 'register', registerBtn);
+  myDialog_popup.setButtonAsOpener(dialogs, 'login', loginBtn);
+  myDialog_popup.setButtonAsOpener(dialogs, 'register', registerBtn);
   // myDialog_popup.setAsOpener(dialogs, 'forgot', forgotBtn);
 
   return header;

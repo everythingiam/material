@@ -1,0 +1,157 @@
+@import "../../styles/common.scss";
+
+.poster-card {
+  padding: 3.7rem $paddings+1 0 $paddings;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-gap: 4rem;
+  margin-bottom: 8.5rem;
+  position: relative;
+
+  .poster {
+    max-width: 100%;
+    height: calc(100vh - 13.5vh - 30px);
+    background: linear-gradient($color-black, #1b1b1b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.8rem;
+    position: sticky;
+
+    .card-container {
+      width: 100%;
+      max-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 1 / 1;
+      padding: 4%;
+      transition: padding 200ms ease-in-out;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    height: calc(100vh - 80px - 55px - 30px);
+    flex-direction: column;
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto;
+
+    header {
+        margin-bottom: 3rem;
+        a {
+            @extend .font-label;
+            color: rgba($color-black, 0.5);
+            font-size: 1.45rem;
+            text-decoration: none;
+          }
+
+          nav{
+            padding-bottom: 2rem;
+          }
+
+      .main {
+        display: flex;
+        justify-content: space-between;
+
+        label {
+          width: 2.4rem;
+          height: 2.4rem;
+          position: relative;
+          cursor: pointer;
+        }
+        label::before {
+          content: "";
+          background-image: url(/src/assets/icons/share.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+        }
+        input {
+          display: none;
+        }
+        h1 {
+          @extend .font-h1-poster;
+          max-width: 70%;
+          color: $color-black;
+          margin-bottom: 3rem;
+        }
+      }
+      .line{
+        height: 0.1rem;
+        width: 100%;
+        background-color: rgba($color-black, 0.15);
+      }
+    }
+
+    li{
+        list-style-type: none;
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 3.5rem;
+    }
+    .price-des{
+        display: flex;
+        justify-content: space-between;
+        .price{
+            @extend .font-p1-medium;
+            color: $color-black;
+            font-size: 2.4rem;
+        }
+        .designer{
+            @extend .font-p2;
+            color: $color-black;
+            text-decoration: underline;
+            cursor: pointer;
+            position: relative; // Добавьте это
+            top: -0.6rem; // И это
+            &:hover {
+                color: $color-accent;
+            }
+        }
+    }
+    .set{
+        p{
+            @extend .font-label;
+            color: rgba($color-black, 0.5);
+            margin-bottom: 1rem;
+        }
+        .righ{
+            margin-left: 10px;
+        }
+    }
+    .sizes {
+        display: flex;
+        gap: 1.5rem;
+      
+        button {
+          max-height: 4.3rem;
+          background-color: rgba($color-black, 0.20);
+          color: white;
+      
+          .button.active {
+            background-color: $color-accent; 
+          }
+        }
+      }
+    .description {
+        @extend .font-p2;
+    }
+  }
+}
+.active{
+    background-color: $color-accent !important;
+}
