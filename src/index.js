@@ -7,18 +7,13 @@ import myGallery from "./modules/gallery/my-gallery";
 import myNews_sign from "./modules/news_sign/my-news_sign";
 import myFooter from "./modules/footer/my-footer";
 import myDropdown from "./UI/my-dropdown/my-dropdown";
-import myLogin_popup from "./modules/dialog_popup/my-dialog_popup";
+import mySlider from "./modules/slider/my-slider";
 
 import myButton from "./UI/my-button/my-button";
-import myMini_card from "./components/my-mini_card/my-mini_card";
 import GalleryImage1 from "./assets/img/gallery1.png";
 import GalleryImage2 from "./assets/img/gallery2.png";
 
-const posters = [
-  myMini_card.create(),
-  myMini_card.create(),
-  myMini_card.create(),
-];
+
 
 const dropdown_array = ["по рекомендациям", "по возрастанию цены", "по убыванию цены"]
 
@@ -32,8 +27,7 @@ const body = document.querySelector("body");
 
 body.appendChild(myHeader.create());
 body.appendChild(myH1_and_p.create("Выбор клиентов"));
-body.appendChild(myDropdown.create(dropdown_array));
-body.appendChild(myPoster_bar.create(posters));
+body.appendChild(mySlider.create());
 body.appendChild(btn2);
 body.appendChild(
   myH1_and_p.create(

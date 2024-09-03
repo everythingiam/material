@@ -1,5 +1,4 @@
 import './my-poster_bar.scss';
-import myMini_card from '../../components/my-mini_card/my-mini_card';
 
 function create(posters_array){
     var bar = document.createElement('section')

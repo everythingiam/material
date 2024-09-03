@@ -29,6 +29,12 @@ $fontweight-extrabold: 800;
     font-size: 65%;
   }
 }
+@media (max-width: 700px) {
+  $paddings: 10rem !default;
+  html {
+    font-size: 60%;
+  }
+}
 
 @font-face {
     font-family: 'TTHoves';

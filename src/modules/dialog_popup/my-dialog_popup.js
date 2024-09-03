@@ -70,15 +70,13 @@ function setLinkAsOpener(popupSystem, type, link) {
 }
 
 function openPopup(popupSystem, type) {
-  popupSystem.style.opacity = "1";
-  popupSystem.style.pointerEvents = "all";
+  popupSystem.classList.add('pop-active');
   document.body.classList.add("no-scroll");
   popupSystem.querySelector(`.${type}`).classList.add('active');
 }
 
 function closeAll(popupSystem) {
-  popupSystem.style.opacity = "0";
-  popupSystem.style.pointerEvents = "none";
+  popupSystem.classList.remove('pop-active');
   document.body.classList.remove("no-scroll");
   popupSystem.querySelectorAll('.dialog-popup.active').forEach(dialog => {
     dialog.classList.remove('active');

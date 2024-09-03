@@ -1,0 +1,64 @@
+@import '../../styles/common.scss';
+@import '../../../node_modules/swiper/swiper-bundle.css';
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0.7;
+
+  .product-card {
+    width: 37.5rem;
+
+    // h2, .price{
+    //   font-size: 1.6rem;
+    // }
+    // .author{
+    //   font-size: 1.3rem;
+    // }
+    // .product-info{
+    //   gap: 1.1rem;
+    // }
+  }
+}
+
+.swiper-slide-active,
+.swiper-slide-next,
+.swiper-slide-prev {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: rgba(250, 250, 250, 0.6); 
+  backdrop-filter: blur(4px); 
+  margin: -7rem 1rem 0 1rem;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  border: 1.5px solid $color-black;
+  backdrop-filter: blur(15px) !important;
+  transition: $transitions;
+
+  &::after {
+    content: '';
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 80%;
+    height: 80%;
+  }
+
+  &:hover{
+    background-color: $color-white; 
+  backdrop-filter: blur(4px); 
+  }
+}
+
+.swiper-button-next::after {
+  background-image: url(/src/assets/icons/arrow-right.svg);
+}
+.swiper-button-prev::after {
+  background-image: url(/src/assets/icons/arrow-left.svg);
+}

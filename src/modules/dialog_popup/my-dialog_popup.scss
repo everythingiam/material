@@ -117,3 +117,8 @@ dialog {
 .no-scroll {
   overflow: hidden;
 }
+
+.pop-active{
+  opacity: 1;
+  pointer-events: all;
+}
