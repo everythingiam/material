@@ -1,1 +1,31 @@
 @import '../../styles/common.scss';
+
+.person{
+  padding: 2.5rem $paddings 6rem $paddings;
+  display: flex;
+  justify-content: space-between;
+  .left{
+    display: flex;
+    align-items: center;
+    .meta{
+      margin-left: 3.3rem;
+    }
+    img{
+      border-radius: 50%;
+      width: 16rem;
+      height: 16rem;
+      object-fit: cover;
+    }
+  }
+  h1 {
+    @extend .font-h1;
+    color: $color-black;
+    margin-bottom: 0.9rem;
+  }
+  p {
+    @extend .font-p1;
+    color: rgba($color-black, 0.8);
+    max-width: 42rem;
+
+  }
+}

@@ -8,13 +8,13 @@ function create() {
   card.innerHTML = cardHTML;
 
   const sizesCont = card.querySelector(".sizes");
-    const sizeButtons = sizesCont.querySelectorAll('button');
-    sizeButtons.forEach(button => {
-        button.addEventListener('click', () =>{
-            sizeButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active'); 
-        })
-    })
+  const sizeButtons = sizesCont.querySelectorAll("button");
+  sizeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      sizeButtons.forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
+    });
+  });
 
   return card;
 }

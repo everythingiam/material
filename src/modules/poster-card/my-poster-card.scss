@@ -1,7 +1,7 @@
 @import "../../styles/common.scss";
 
 .poster-card {
-  padding: 3.7rem $paddings+1 0 $paddings;
+  padding: 2.5rem $paddings+1 0 $paddings;
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-gap: 4rem;
@@ -129,9 +129,7 @@
             color: rgba($color-black, 0.5);
             margin-bottom: 1rem;
         }
-        .righ{
-            margin-left: 10px;
-        }
+        
     }
     .sizes {
         display: flex;
@@ -145,6 +143,9 @@
           .button.active {
             background-color: $color-accent; 
           }
+          &:focus{
+            outline: none;
+          }
         }
       }
     .description {
@@ -154,4 +155,9 @@
 }
 .active{
     background-color: $color-accent !important;
+}
+.righ {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }

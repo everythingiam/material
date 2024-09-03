@@ -10,7 +10,8 @@ module.exports = {
     catalog: "./src/pages/catalog/index.js",
     favourites: "./src/pages/favourites/index.js",
     cart: "./src/pages/cart/index.js",
-    poster: "./src/pages/posters/american-architecture/index.js"
+    poster: "./src/pages/posters/american-architecture/index.js",
+    person: "./src/pages/people/miron_dis/index.js",
   },
   output: {
     filename: "[name].bundle.js",
@@ -48,6 +49,11 @@ module.exports = {
       template: "./src/pages/posters/american-architecture/index.html",
       filename: "posters/american-architecture/index.html", 
       chunks: ["poster"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/people/miron_dis/index.html",
+      filename: "people/miron_dis/index.html", 
+      chunks: ["person"],
     }),
     new webpack.ProvidePlugin({
       typography: './src/styles/typography.scss',

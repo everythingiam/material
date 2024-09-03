@@ -57,9 +57,6 @@
     @extend .font-p3;
     color: rgba($color-black, 0.5);
     
-    &:hover{
-      text-decoration: underline;
-    }
   }
 
   .price {
@@ -71,7 +68,7 @@
     transition: 900ms;
 
     h2,
-    p {
+    p, a {
       color: $color-accent;
     }
 
