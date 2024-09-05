@@ -14,13 +14,14 @@
     width: 98%;
     path {
       fill: transparent;
+      transition: fill .9s cubic-bezier(.5,0,0.5,1);
+
     }
   
     &:hover {
       path {
       fill: $color-white;
       opacity: 1;
-      transition: fill .9s cubic-bezier(.5,0,0.5,1);
       // transition: stroke .9s cubic-bezier(.5,0,0.5,1);
 
       }

@@ -1,4 +1,5 @@
 import './my-form.scss'
+import './validation.js'
 
 // function create(labelP, placeholderP){
 //     const formm = document.createElement('form')

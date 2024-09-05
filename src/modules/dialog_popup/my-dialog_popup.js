@@ -6,6 +6,8 @@ import forgotHTML from "./forgot.html";
 import myForm from "../../UI/my-form/my-form";
 import myButton from "../../UI/my-button/my-button";
 
+import "./validation.js";
+
 const contentMap = new Map([
   ['login', loginHTML],
   ['register', registerHTML],

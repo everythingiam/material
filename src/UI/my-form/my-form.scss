@@ -27,13 +27,12 @@ form {
     background-color: rgba($color-black, 0.04);
     border-radius: $roundings;
 
-    &.success {
-      border-color: #6EAD48;
+    &.invalid{
+      border: 1px solid #E54E1F;
     }
 
-    &.error {
-      border-color: #E54E1F;
-      color: #E54E1F;
+    &.success {
+      border-color: #6EAD48;
     }
 
     &:disabled {
@@ -50,9 +49,11 @@ form {
     }
   }
 
-  span {
-    font-size: 0.75rem;
-    color: rgba($color-black, 0.5);
-    margin-top: 1.5rem;
+  .error-message {
+    @extend .font-p3;
+    font-size: 1.2rem;
+    color: #E54E1F;
+    margin-top: 1rem;
   }
+  
 }

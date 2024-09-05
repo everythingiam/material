@@ -8,6 +8,7 @@ module.exports = {
   entry: {
     home: "./src/index.js",
     catalog: "./src/pages/catalog/index.js",
+    profilesettings: "./src/pages/profilesettings/index.js",
     favourites: "./src/pages/favourites/index.js",
     cart: "./src/pages/cart/index.js",
     poster: "./src/pages/posters/american-architecture/index.js",
@@ -54,6 +55,11 @@ module.exports = {
       template: "./src/pages/people/miron_dis/index.html",
       filename: "people/miron_dis/index.html", 
       chunks: ["person"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/profilesettings/index.html",
+      filename: "profilesettings/index.html", 
+      chunks: ["profilesettings"],
     }),
     new webpack.ProvidePlugin({
       typography: './src/styles/typography.scss',

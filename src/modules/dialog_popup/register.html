@@ -3,26 +3,32 @@
 </div>
 <div class="right-side">
   <h2>Регистрация</h2>
-  <form action="">
+  <form action="" class="register">
     <div class="set">
       <label for="name">Никнейм</label>
       <input type="text" placeholder="Имя или никнейм" required />
+      <span class="error-message"></span>
     </div>
     <div class="set">
       <label for="name">Почта</label>
       <input type="text" placeholder="Почта" required />
+      <span class="error-message"></span>
     </div>
     <div class="password-wrap">
-        <div class="set">
-          <label for="password">Пароль</label>
-          <input type="password" placeholder="Пароль" required />
-        </div>
-        <div class="set">
-          <label for="password">Пароль</label>
-          <input type="password" placeholder="Пароль" required />
-        </div>
+      <div class="set">
+        <label for="password">Пароль</label>
+        <input type="password" placeholder="Пароль" required />
+        <span class="error-message"></span>
+      </div>
+      <div class="set">
+        <label for="password">Пароль</label>
+        <input type="password" placeholder="Пароль" required />
+        <span class="error-message"></span>
+      </div>
     </div>
-    <button class="button normal custom" type="submit">Зарегестрироваться</button>
+    <button class="button normal custom" type="submit">
+      Зарегестрироваться
+    </button>
   </form>
   <p>ИЛИ</p>
   <button class="button outline custom">Войти через Google</button>
