@@ -2,26 +2,27 @@ import "./styles/common.scss";
 
 import myHeader from "./modules/header/my-header";
 import myH1_and_p from "./modules/h1_and_p/my-h1_and_p";
-import myPoster_bar from "./modules/poster_bar/my-poster_bar";
 import myGallery from "./modules/gallery/my-gallery";
 import myNews_sign from "./modules/news_sign/my-news_sign";
 import myFooter from "./modules/footer/my-footer";
-import myDropdown from "./UI/my-dropdown/my-dropdown";
 import mySlider from "./modules/slider/my-slider";
+import myDialog_popup from "./modules/dialog_popup/my-dialog_popup";
 
 import myButton from "./UI/my-button/my-button";
 import GalleryImage1 from "./assets/img/gallery1.png";
 import GalleryImage2 from "./assets/img/gallery2.png";
 
 
-
-const dropdown_array = ["по рекомендациям", "по возрастанию цены", "по убыванию цены"]
-
-var btn2 = myButton.createA("Посмотреть всё", "outline", "custom", '#');
-var btn3 = myButton.createA("Перейти в профиль", "normal", "custom", '#');
+const btn2 = myButton.createA("Посмотреть всё", "outline", "custom", '#');
+btn2.href = "/catalog/index.html"
+const btn3 = myButton.createA("Перейти в профиль", "normal", "custom", '#');
 
 btn2.style = "margin-bottom: 2.2rem; margin-top: 4rem; align-self: center; max-width: 32.5rem";
 btn3.style = "margin-bottom: 6.1rem; margin-top: 0rem; align-self: center; max-width: 32.5rem";
+
+document.addEventListener("DOMContentLoaded", () => {
+  myDialog_popup.setButtonAsOpener(document.querySelector('dialog'), 'login', btn3);
+});
 
 const body = document.querySelector("body");
 

@@ -149,15 +149,18 @@
           &:focus{
             outline: none;
           }
+          &:hover{
+            background-color: rgba($color-black, 0.40);
+          }
         }
       }
     .description {
         @extend .font-p2;
     }
   }
-}
-.active{
-    background-color: $color-accent !important;
+  .active{
+      background-color: $color-accent !important;
+  }
 }
 .righ {
   display: flex;

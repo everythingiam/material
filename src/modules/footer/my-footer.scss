@@ -10,6 +10,14 @@
   align-items: center;
   padding-bottom: 1rem;
 
+  a{
+    text-decoration: none;
+    transition: $transitions;
+    &:hover{
+      color: rgba($color-white, 0.6)
+    }
+  }
+
   svg {
     width: 98%;
     path {
