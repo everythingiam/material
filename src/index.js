@@ -14,7 +14,7 @@ import GalleryImage2 from "./assets/img/gallery2.png";
 
 
 const btn2 = myButton.createA("Посмотреть всё", "outline", "custom", '#');
-btn2.href = "/kursovaya/catalog/index.html"
+btn2.href = "/material/catalog/index.html"
 const btn3 = myButton.createA("Перейти в профиль", "normal", "custom", '#');
 
 btn2.style = "margin-bottom: 2.2rem; margin-top: 4rem; align-self: center; max-width: 32.5rem";

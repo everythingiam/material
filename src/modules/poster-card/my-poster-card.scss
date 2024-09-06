@@ -174,3 +174,13 @@
   flex-direction: column;
   align-items: flex-end;
 }
+
+@media (max-width: 1000px){
+  .poster-card{
+    grid-template-columns: 1fr !important;
+    margin-bottom: 1rem !important;
+  }
+  .poster{
+    height: calc(80vh - 20.5vh - 30px) !important;
+  }
+}

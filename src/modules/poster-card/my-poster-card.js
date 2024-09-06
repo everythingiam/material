@@ -23,7 +23,7 @@ function create() {
 
 function addTilt(card) {
   VanillaTilt.init(card.querySelector('.card-container'), {
-    max: 8,
+    max: 7,
     reverse: true,
   });
 }
