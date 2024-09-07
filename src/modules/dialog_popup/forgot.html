@@ -1,21 +1,30 @@
 <div class="left-side">
   <picture>
-    <source media="(min-width: 1200px)" srcset="/src/assets/img/register-large.png">
-    <source media="(min-width: 768px)" srcset="/src/assets/img/register-medium.png">
+    <source
+      media="(min-width: 1200px)"
+      srcset="/src/assets/img/register-large.png"
+    />
+    <source
+      media="(min-width: 768px)"
+      srcset="/src/assets/img/register-medium.png"
+    />
     <img src="/src/assets/img/register-small.png" alt="register Image" />
   </picture>
   <p>Ещё не с нами? <span class="registerLink">Регистрируйтесь!</span></p>
 </div>
 <div class="right-side">
-  <h2>Забыли пароль</h2>
   <form action="">
-    <div class="set">
-      <label for="name">Имя или никнейм</label>
-      <input type="text" placeholder="Имя или никнейм" required />
-      <span class="error-message"></span>
-      
-    </div>
-    <button class="button normal custom" type="submit">Восстановить пароль</button>
+    <h2>Забыли пароль</h2>
+    <ul class="fields">
+      <li class="text">
+        <label for="name">Почта или никнейм</label>
+        <input type="text" placeholder="Почта или никнейм" required />
+        <span class="error-message"></span>
+      </li>
+    </ul>
+    <button class="button normal custom" type="submit">
+      Восстановить пароль
+    </button>
+    <span class="loginLink blac">Вернуться назад</span>
   </form>
-  <span class="loginLink blac">Вернуться назад</span>
 </div>

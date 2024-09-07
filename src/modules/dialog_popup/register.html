@@ -1,40 +1,50 @@
 <div class="left-side">
   <picture>
-    <source media="(min-width: 1200px)" srcset="/src/assets/img/register-large.png">
-    <source media="(min-width: 768px)" srcset="/src/assets/img/register-medium.png">
+    <source
+      media="(min-width: 1200px)"
+      srcset="/src/assets/img/register-large.png"
+    />
+    <source
+      media="(min-width: 768px)"
+      srcset="/src/assets/img/register-medium.png"
+    />
     <img src="/src/assets/img/register-small.png" alt="register Image" />
   </picture>
   <p>Уже с нами? <span class="loginLink">Входите!</span></p>
 </div>
 <div class="right-side">
-  <h2>Регистрация</h2>
   <form action="" class="register">
-    <div class="set">
-      <label for="name">Никнейм</label>
-      <input type="text" placeholder="Имя или никнейм" required />
-      <span class="error-message"></span>
-    </div>
-    <div class="set">
-      <label for="name">Почта</label>
-      <input type="text" placeholder="Почта" required />
-      <span class="error-message"></span>
-    </div>
-    <div class="password-wrap">
-      <div class="set">
-        <label for="password">Пароль</label>
-        <input type="password" placeholder="Пароль" required />
+    <h2>Регистрация</h2>
+    <ul class="fields">
+      <li class="text">
+        <label for="name">Никнейм</label>
+        <input type="text" placeholder="Никнейм" required />
         <span class="error-message"></span>
-      </div>
-      <div class="set">
-        <label for="password">Пароль</label>
-        <input type="password" placeholder="Пароль" required />
+      </li>
+      <li class="text">
+        <label for="name">Почта</label>
+        <input type="email" placeholder="Почта" required />
         <span class="error-message"></span>
-      </div>
-    </div>
+      </li>
+      <li class="text password-wrap">
+        <div class="text">
+          <label for="password">Пароль</label>
+          <input type="password" placeholder="Пароль" required />
+          <span class="error-message"></span>
+        </div>
+        <div class="text">
+          <label for="password">Пароль</label>
+          <input type="password" placeholder="Пароль" required />
+          <span class="error-message"></span>
+        </div>
+      </li>
+    </ul>
     <button class="button normal custom" type="submit">
       Зарегестрироваться
     </button>
   </form>
-  <p>ИЛИ</p>
-  <button class="button outline custom">Войти через Google</button>
+  <div class="or-google">
+    <p>ИЛИ</p>
+    <button class="button outline custom">Войти через Google</button>
+  </div>
 </div>

@@ -1,12 +1,16 @@
-<h2>Необычные новости в мире дизайна и классные находки!</h2>
 <form action="">
-    <div class="set">
-        <label for="name">Имя</label>
-        <input name="name" type="text" placeholder="Введите имя" required>
-    </div>
-    <div class="set">
-        <label for="mail">Почта</label>
-        <input name="mail" type="text" placeholder="Введите почту" required>
-    </div>
-    <button class="button custom" type="submit">Подписаться на рассылку</button>
+  <h2>Необычные новости в мире дизайна и классные находки!</h2>
+  <ul class="fields">
+    <li class="text">
+      <label for="name">Имя</label>
+      <input name="name" type="text" placeholder="Введите имя" required />
+      <span class="error-message"></span>
+    </li>
+    <li class="text">
+      <label for="mail">Почта</label>
+      <input name="mail" type="text" placeholder="Введите почту" required />
+      <span class="error-message"></span>
+    </li>
+  </ul>
+  <button class="button custom" type="submit">Подписаться на рассылку</button>
 </form>

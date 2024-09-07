@@ -13,7 +13,14 @@ form {
     margin-bottom: 0.8rem;
     text-transform: uppercase;
   }
-  .set{
+
+  ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+  }
+  li, .text{
     display: flex;
     flex-direction: column;
   }
@@ -26,6 +33,7 @@ form {
     height: 4.5rem;
     background-color: rgba($color-black, 0.04);
     border-radius: $roundings;
+    width: 100%;
 
     &.invalid{
       border: 1px solid #E54E1F;

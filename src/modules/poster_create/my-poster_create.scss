@@ -1,0 +1,37 @@
+@import '../../styles/common.scss';
+
+.poster-create {
+  padding: 2.5rem $paddings + 1 0 $paddings;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-gap: 4rem;
+  margin-bottom: 8.5rem;
+  position: relative;
+
+  .poster-left{
+    background: linear-gradient(#EDEDED, #CCCCCC);
+  }
+
+  .right {
+    display: flex;
+    height: calc(100vh - 80px - 55px - 30px);
+    flex-direction: column;
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto;
+
+    h2{
+      @extend .font-h2;
+    }
+
+    form{
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+
+  aside{
+    height: calc(100vh - 22vh - 30px);
+  }
+}

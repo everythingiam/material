@@ -13,6 +13,7 @@ module.exports = {
     cart: "./src/pages/cart/index.js",
     poster: "./src/pages/posters/american-architecture/index.js",
     person: "./src/pages/people/miron_dis/index.js",
+    create: "./src/pages/create/index.js",
   },
   output: {
     filename: "[name].bundle.js",
@@ -61,6 +62,11 @@ module.exports = {
       template: "./src/pages/profilesettings/index.html",
       filename: "profilesettings/index.html", 
       chunks: ["profilesettings"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/create/index.html",
+      filename: "create/index.html", 
+      chunks: ["create"],
     }),
     new webpack.ProvidePlugin({
       typography: './src/styles/typography.scss',

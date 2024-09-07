@@ -1,12 +1,15 @@
 import cardHTML from './index.html';
+import myPosterFrame from '../../components/my-poster-frame/my-poster-frame';
 import './my-poster-card.scss';
-import myButton from '../../UI/my-button/my-button';
-import VanillaTilt from 'vanilla-tilt';
 
 function create() {
   const card = document.createElement('article');
   card.classList.add('poster-card');
   card.innerHTML = cardHTML;
+
+  const frame = myPosterFrame.create();
+
+  card.insertBefore(frame, card.querySelector('.right'))
 
   const sizesCont = card.querySelector('.sizes');
   const sizeButtons = sizesCont.querySelectorAll('button');
@@ -17,16 +20,9 @@ function create() {
     });
   });
 
-  addTilt(card);
   return card;
 }
 
-function addTilt(card) {
-  VanillaTilt.init(card.querySelector('.card-container'), {
-    max: 7,
-    reverse: true,
-  });
-}
 export default {
   create,
 };

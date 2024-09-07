@@ -72,42 +72,21 @@ dialog {
       }
     }
 
-    .right-side,
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
     .password-wrap {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
       width: 100%;
     }
-    
-    .set {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
-    
-    input {
-      width: 100%;
-    }
 
     .right-side {
       padding: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
       h2 {
         @extend .font-h2;
-      }
-
-      p {
-        @extend .font-label;
-        align-self: center;
-        color: rgba($color-black, 0.5);
-        margin-top: 2rem;
-        margin-bottom: -1rem;
       }
 
       .blac {
@@ -124,8 +103,16 @@ dialog {
         }
       }
 
-      .normal {
-        margin-top: 1rem;
+      .or-google {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        p {
+          @extend .font-label;
+          align-self: center;
+          color: rgba($color-black, 0.5);
+          margin-bottom: 1.5rem;
+        }
       }
     }
   }
@@ -144,12 +131,14 @@ dialog {
   pointer-events: all;
 }
 
-
-@media (max-width: 730px){
-  .dialog-popup{
+.register{
+  min-height: 41rem;
+}
+@media (max-width: 730px) {
+  .dialog-popup {
     grid-template-columns: 1fr !important;
   }
-  .left-side{
+  .left-side {
     height: 35rem !important;
   }
 }

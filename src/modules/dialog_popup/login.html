@@ -1,28 +1,37 @@
 <div class="left-side">
   <picture>
-    <source media="(min-width: 1200px)" srcset="/src/assets/img/login-large.png">
-    <source media="(min-width: 768px)" srcset="/src/assets/img/login-medium.png">
+    <source
+      media="(min-width: 1200px)"
+      srcset="/src/assets/img/login-large.png"
+    />
+    <source
+      media="(min-width: 768px)"
+      srcset="/src/assets/img/login-medium.png"
+    />
     <img src="/src/assets/img/login-small.png" alt="Login Image" />
   </picture>
   <p>Ещё не с нами? <span class="registerLink">Регистрируйтесь!</span></p>
 </div>
 <div class="right-side">
-  <h2>Вход</h2>
   <form action="" class="login">
-    <div class="set">
-      <label for="name">Почта или никнейм</label>
-      <input type="text" name="name" placeholder="Имя или никнейм" required />
-      <span class="error-message"></span>
-    </div>
-    <div class="set">
-      <label for="password">Пароль</label>
-      <input type="password" name="password" placeholder="Пароль" required />
-      <span class="error-message"></span>
-
-    </div>
+    <h2>Вход</h2>
+    <ul class="fields">
+      <li class="text">
+        <label for="name">Почта или никнейм</label>
+        <input type="text" name="name" placeholder="Имя или никнейм" required />
+        <span class="error-message"></span>
+      </li>
+      <li class="text">
+        <label for="password">Пароль</label>
+        <input type="password" name="password" placeholder="Пароль" required />
+        <span class="error-message"></span>
+      </li>
+    </ul>
     <button class="button normal custom" type="submit">Войти</button>
+    <span class="forgotLink blac">Забыли пароль?</span>
   </form>
-  <span class="forgotLink blac">Забыли пароль?</span>
-  <p>ИЛИ</p>
-  <button class="button outline custom">Войти через Google</button>
+  <div class="or-google">
+    <p>ИЛИ</p>
+    <button class="button outline custom">Войти через Google</button>
+  </div>
 </div>

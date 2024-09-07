@@ -42,7 +42,7 @@
       transition: 200ms;
       color: $color-black;
       &:hover {
-        color: rgba($color-black, 0.6);
+        color: $color-accent;
       }
     }
   }
@@ -134,14 +134,14 @@
     a {
       display: block;
       width: 100%;
-      padding: 2rem; // Увеличь размер padding для большей кликабельной зоны
-      text-align: left; // Выравнивание текста влево
-      font-size: 1.6rem; // Сделай текст крупнее
+      padding: 2rem; 
+      text-align: left; 
+      font-size: 1.6rem; 
       text-decoration: none;
       color: $color-black;
 
       &:hover {
-        background-color: rgba($color-black, 0.12); // Добавь фон при наведении
+        background-color: rgba($color-black, 0.12); 
       }
     }
   }
