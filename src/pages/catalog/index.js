@@ -14,10 +14,12 @@ const posters = fakePosters.map(poster => myMini_card.create(poster))
 console.log(posters);
 
 const body = document.querySelector('body');
+const main = document.createElement('main');
 
 body.appendChild(myHeader.create())
-body.appendChild(myH1_and_p.create('Каталог'))
-body.appendChild(myPoster_bar.create(posters))
+body.appendChild(main);
+main.appendChild(myH1_and_p.create('Каталог'))
+main.appendChild(myPoster_bar.create(posters))
 body.appendChild(myFooter.create())
 
 

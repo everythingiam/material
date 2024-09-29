@@ -1,22 +1,25 @@
-import "./my-dialog_popup.scss";
-import loginHTML from "./login.html";
-import registerHTML from "./register.html";
-import forgotHTML from "./forgot.html";
+import './my-dialog_popup.scss';
+import loginHTML from './login.html';
+import registerHTML from './register.html';
+import forgotHTML from './forgot.html';
 
-import myForm from "../../UI/my-form/my-form";
-import myButton from "../../UI/my-button/my-button";
+import myForm from '../../UI/my-form/my-form';
+import myButton from '../../UI/my-button/my-button';
 
 // import "./validation.js";
 
 const contentMap = new Map([
   ['login', loginHTML],
   ['register', registerHTML],
-  ['forgot', forgotHTML]
+  ['forgot', forgotHTML],
 ]);
 
 function create() {
-  const popupSystem = document.createElement("dialog");
-  document.body.appendChild(popupSystem);
+  const popupSystem = document.createElement('dialog');
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('main').appendChild(popupSystem);
+  });
 
   contentMap.forEach((content, type) => {
     const newWindow = document.createElement('div');
@@ -32,28 +35,28 @@ function create() {
 }
 
 function addCloseLogic(popupSystem) {
-  popupSystem.addEventListener("click", (event) => {
+  popupSystem.addEventListener('click', (event) => {
     if (!event.target.closest('.dialog-popup.active')) {
       closeAll(popupSystem);
     }
   });
 
-  popupSystem.querySelectorAll(".dialog-popup").forEach(dialog => {
-    dialog.addEventListener("click", (event) => event.stopPropagation());
+  popupSystem.querySelectorAll('.dialog-popup').forEach((dialog) => {
+    dialog.addEventListener('click', (event) => event.stopPropagation());
   });
 }
 
 function setButtonAsOpener(popupSystem, type, button) {
   if (button) {
-    button.addEventListener("click", () => openPopup(popupSystem, type));
+    button.addEventListener('click', () => openPopup(popupSystem, type));
   } else {
     console.error(`Button for type ${type} not found`);
   }
 }
 
 function setLinks(popupSystem) {
-  ['register', 'login', 'forgot'].forEach(type => {
-    popupSystem.querySelectorAll(`.${type}Link`).forEach(link => {
+  ['register', 'login', 'forgot'].forEach((type) => {
+    popupSystem.querySelectorAll(`.${type}Link`).forEach((link) => {
       setLinkAsOpener(popupSystem, type, link);
     });
   });
@@ -61,7 +64,7 @@ function setLinks(popupSystem) {
 
 function setLinkAsOpener(popupSystem, type, link) {
   if (link) {
-    link.addEventListener("click", (event) => {
+    link.addEventListener('click', (event) => {
       event.preventDefault();
       closeAll(popupSystem);
       openPopup(popupSystem, type);
@@ -73,14 +76,14 @@ function setLinkAsOpener(popupSystem, type, link) {
 
 function openPopup(popupSystem, type) {
   popupSystem.classList.add('pop-active');
-  document.body.classList.add("no-scroll");
+  document.body.classList.add('no-scroll');
   popupSystem.querySelector(`.${type}`).classList.add('active');
 }
 
 function closeAll(popupSystem) {
   popupSystem.classList.remove('pop-active');
-  document.body.classList.remove("no-scroll");
-  popupSystem.querySelectorAll('.dialog-popup.active').forEach(dialog => {
+  document.body.classList.remove('no-scroll');
+  popupSystem.querySelectorAll('.dialog-popup.active').forEach((dialog) => {
     dialog.classList.remove('active');
   });
 }

@@ -20,29 +20,29 @@ const btn3 = myButton.createA("Перейти в профиль", "normal", "cus
 btn2.style = "margin-bottom: 2.2rem; margin-top: 4rem; align-self: center; max-width: 32.5rem";
 btn3.style = "margin-bottom: 6.1rem; margin-top: 0rem; align-self: center; max-width: 32.5rem";
 
-document.addEventListener("DOMContentLoaded", () => {
-  myDialog_popup.setButtonAsOpener(document.querySelector('dialog'), 'login', btn3);
-});
+myDialog_popup.setButtonAsOpener(document.querySelector('dialog'), 'login', btn3);
 
 const body = document.querySelector("body");
+const main = document.createElement('main');
 
 body.appendChild(myHeader.create());
-body.appendChild(myH1_and_p.create("Выбор клиентов"));
-body.appendChild(mySlider.create());
-body.appendChild(btn2);
-body.appendChild(
+body.appendChild(main);
+main.appendChild(myH1_and_p.create("Выбор клиентов"));
+main.appendChild(mySlider.create());
+main.appendChild(btn2);
+main.appendChild(
   myH1_and_p.create(
     "Качество и надёжная доставка",
     "Постеры печатаются на качественной матовой бумаге, которая обеспечивает яркие цвета. А перевозка в экологичном картонном тубусе не позволит товару повредиться."
   )
 );
-body.appendChild(myGallery.create(GalleryImage1, GalleryImage2));
-body.appendChild(
+main.appendChild(myGallery.create(GalleryImage1, GalleryImage2));
+main.appendChild(
   myH1_and_p.create(
     "Удобный постинг",
     "Если вы дизайнер и хотите продавать свои работы, вы можете добавлять в свой профиль постеры, и пользователи смогут увидеть его в каталоге."
   )
 );
-body.appendChild(btn3);
-body.appendChild(myNews_sign.create());
+main.appendChild(btn3);
+main.appendChild(myNews_sign.create());
 body.appendChild(myFooter.create());

@@ -3,118 +3,115 @@
 .product-card {
   overflow: hidden;
 
-  .product-card-container {
-    background: linear-gradient($color-black, #1b1b1b);
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    border-radius: 0.8rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4%;
-    transition: padding 200ms ease-in-out;
-    position: relative;
-    img {
+  > a {
+    > .product-card-container {
+      background: linear-gradient($color-black, #1b1b1b);
       width: 100%;
-      height: auto;
-      max-height: 100%;
-      object-fit: contain;
-    }
-  }
+      aspect-ratio: 1 / 1;
+      border-radius: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4%;
+      transition: $transitions;
+      position: relative;
 
-  .product-info {
-    padding-top: 1.4rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.4rem;
-  }
+      > img {
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        object-fit: contain;
+      }
 
-  .product-meta {
-    display: flex;
-    justify-content: space-between;
-  }
+      > .favorite-btn {
+        background-color: rgba(250, 250, 250, 0.6);
+        backdrop-filter: blur(4px);
+        transition: $transitions;
 
-  .separator {
-    width: 100%;
-    height: 0.07rem;
-    background-color: rgba($color-black, 0.15);
-    transition: background-color 200ms ease-in-out;
-  }
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        border: 1.5px solid $color-black;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-  a {
-    text-decoration: none;
-  }
+        > svg {
+          margin-top: 2px;
+        }
 
-  h2 {
-    @extend .font-p1-medium;
-    color: $color-black;
-    transition: color 200ms ease-in-out;
-  }
+        &:hover {
+          background-color: $color-white;
+          backdrop-filter: blur(4px);
+        }
 
-  p {
-    transition: color 200ms ease-in-out;
-  }
-
-  .author {
-    @extend .font-p3;
-    color: rgba($color-black, 0.5);
-  }
-
-  .price {
-    @extend .font-p1-medium;
-    color: $color-black;
-  }
-
-  &:hover {
-    transition: 900ms;
-
-    h2,
-    p,
-    a {
-      color: $color-accent;
-    }
-    h2{
-      @extend .font-h2-mini
+        &.fav-active {
+          svg path {
+            fill: $color-black;
+          }
+        }
+      }
     }
 
-    .product-card-container {
-      padding: 3%;
+    > footer.product-info {
+      padding-top: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+
+      > .product-meta {
+        display: flex;
+        justify-content: space-between;
+
+        > p.author {
+          @extend .font-p3;
+          color: rgba($color-black, 0.5);
+          transition: $transitions;
+        }
+
+        > p.price {
+          @extend .font-h2-mini;
+          color: $color-black;
+          transition: $transitions;
+        }
+      }
+
+      > .separator {
+        width: 100%;
+        height: 0.07rem;
+        background-color: rgba($color-black, 0.15);
+        transition: $transitions;
+      }
+
+      > h2 {
+        @extend .font-h2-mini;
+        color: $color-black;
+        transition: color 200ms ease-in-out;
+      }
+
+      > p {
+        transition: color 200ms ease-in-out;
+      }
     }
 
-    .separator {
-      background-color: rgba($color-accent, 0.5);
+    &:hover {
+      > footer.product-info > h2,
+      > footer.product-info > .product-meta > p.author,
+      > footer.product-info > .product-meta > p.price {
+        color: $color-accent;
+      }
+
+      > .product-card-container {
+        padding: 3%;
+      }
+
+      > footer.product-info > .separator {
+        background-color: rgba($color-accent, 0.5);
+      }
     }
-  }
-}
-
-.favorite-btn {
-  background-color: rgba(250, 250, 250, 0.6); 
-  backdrop-filter: blur(4px); 
-  transition: $transitions;
-
-  height: 4rem;
-  width: 4rem;
-  border-radius: 50%;
-  border: 1.5px solid $color-black;
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  svg {
-    margin-top: 2px;
-  }
-
-  &:hover{
-    background-color: $color-white; 
-  backdrop-filter: blur(4px); 
-  }
-}
-.fav-active{
-  svg path {
-    fill: $color-black;
   }
 }

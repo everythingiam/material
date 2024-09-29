@@ -1,6 +1,6 @@
 @import '../../styles/common.scss';
 
-.poster-bar{
+html > body > main > section.poster-bar{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));

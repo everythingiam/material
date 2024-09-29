@@ -5,79 +5,83 @@ form {
   flex-direction: column;
   width: 100%;
   gap: 2.5rem;
-  // max-width: 320px;
 
-  label {
-    @extend .font-label;
-    color: rgba($color-black, 0.5);
-    margin-bottom: 0.8rem;
-    text-transform: uppercase;
-  }
-
-  ul {
+  > ul {
     display: flex;
     flex-direction: column;
     gap: 1.4rem;
     list-style: none;
-  }
-  li,
-  .text {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  textarea{
-    resize: none;
-    min-height: 9rem;
-  }
-  input, textarea {
-    @extend .font-p3;
-    padding: 1.3rem 1.6rem;
-    border: 1px solid rgba($color-black, 0.1);
-    background-color: rgba($color-black, 0.04);
-    border-radius: $roundings;
-    width: 100%;
 
+    > li {
+      display: flex;
+      flex-direction: column;
 
-    &.invalid {
-      border: 1px solid #e54e1f;
+      > label {
+        @extend .font-label;
+        color: rgba($color-black, 0.5);
+        margin-bottom: 0.8rem;
+        text-transform: uppercase;
+      }
+
+      > textarea {
+        resize: none;
+        min-height: 9rem;
+      }
+
+      > input,
+      textarea {
+        @extend .font-p3;
+        padding: 1.3rem 1.6rem;
+        border: 1px solid rgba($color-black, 0.1);
+        background-color: rgba($color-black, 0.04);
+        border-radius: $roundings;
+        width: 100%;
+
+        &.invalid {
+          border: 1px solid #e54e1f;
+        }
+
+        &.success {
+          border-color: #6ead48;
+        }
+
+        &:disabled {
+          background-color: #f0f0f0;
+          cursor: not-allowed;
+        }
+
+        &:hover {
+          border: 0.1rem solid rgba($color-black, 0.6);
+        }
+        &:focus {
+          outline: 0.2rem solid rgba(37, 37, 213, 0.2);
+          border: 0.1rem solid $color-accent;
+        }
+      }
+
+      > span.error-message {
+        @extend .font-p3;
+        font-size: 1.2rem;
+        color: #e54e1f;
+        margin-top: 1rem;
+      }
     }
-
-    &.success {
-      border-color: #6ead48;
-    }
-
-    &:disabled {
-      background-color: #f0f0f0;
-      cursor: not-allowed;
-    }
-
-    &:hover {
-      border: 0.1rem solid rgba($color-black, 0.6);
-    }
-    &:focus {
-      outline: 0.2rem solid rgba(37, 37, 213, 0.2);
-      border: 0.1rem solid $color-accent;
-    }
-
-  }
-
-  li,
-  .text {
-    display: flex;
-    flex-direction: column;
-  }
-
-  // .textarea{
-  //   input{
-  //     height: 10rem;
-  //   }
-  // }
-
-  .error-message {
-    @extend .font-p3;
-    font-size: 1.2rem;
-    color: #e54e1f;
-    margin-top: 1rem;
   }
 }
+
+@media (max-width: $lg-screen) {
+  form{ 
+    gap: 1.8rem;
+
+    > ul {
+      gap: 1rem;
+    }
+  }
+
+  form > ul > li > input, 
+  form > ul > li textarea {
+    padding: 1.2rem 1.5rem;
+  }
+}
+
+

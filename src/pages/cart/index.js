@@ -24,10 +24,12 @@ const posters = [
 ]
 
 const body = document.querySelector('body');
+const main = document.createElement('main');
 
 body.appendChild(myHeader.create())
-body.appendChild(myH1_and_p.create('Корзина'))
-body.appendChild(myPoster_bar.create(posters))
+body.appendChild(main);
+main.appendChild(myH1_and_p.create('Корзина'))
+main.appendChild(myPoster_bar.create(posters))
 body.appendChild(myFooter.create())
 
 

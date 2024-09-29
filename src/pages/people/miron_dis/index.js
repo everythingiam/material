@@ -6,6 +6,7 @@ import myFooter from '../../../modules/footer/my-footer'
 
 
 const body = document.querySelector('body');
+const main = document.createElement('main');
 
 const posters = [
   myMini_card.create(),
@@ -15,6 +16,7 @@ const posters = [
 
 const person = myPerson.create();
 body.appendChild(myHeader.create())
-body.appendChild(person);
-body.appendChild(myPosterBar.create(posters));
+body.appendChild(main);
+main.appendChild(person);
+main.appendChild(myPosterBar.create(posters));
 body.appendChild(myFooter.create())

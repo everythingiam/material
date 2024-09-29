@@ -1,10 +1,10 @@
 import './my-news_sign.scss';
-import myMailForm from '../../components/my-mail-form/my-mail-form';
-
+import mailHTML from './index.html'
 
 function create(){
     const mail = document.createElement('section');
-    mail.appendChild(myMailForm.create())
+    mail.innerHTML = mailHTML;
+    const img = document.createElement('img');
     mail.classList.add('mail')
     // mail.innerHTML = newsHTML;
     return mail;

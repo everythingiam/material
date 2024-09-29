@@ -1,38 +1,43 @@
 @import '../../styles/common.scss';
 
-html > body > section.gallery {
-	height: auto;
-	width: calc(100% + 32px);
-	display: flex;
-	gap: 2%;
+html > body > main > section.gallery {
+  height: auto;
+  width: calc(100% + 32px);
+  display: flex;
+  gap: 2%;
+  padding: 0 3.6rem;
 
-	> .img-container {
-		width: 100%;
-		height: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+  > .img-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-		> img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover; 
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       object-position: top;
-			border-radius: $roundings;
-		}
-	}
+      border-radius: $roundings;
+    }
+  }
 }
 
 @media (max-width: $md-screen) {
-	html > body > section.gallery > .img-container {
-		height: 24rem; 
-    > img{
+  html > body > main > section.gallery {
+    padding: 0;
+  }
+  
+  html > body > main > section.gallery > .img-container {
+    height: 24rem;
+
+    > img {
       border-radius: 0;
     }
-	}
+  }
 
-	html > body > section.gallery > .img-container:last-child {
-		display: none; 
-	}
+  html > body > main > section.gallery > .img-container:last-child {
+    display: none;
+  }
 }
-

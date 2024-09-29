@@ -22,7 +22,7 @@ function create() {
         prevEl: swiperComponent.querySelector('.swiper-button-prev'),
       },
       autoplay: {
-        delay: 100000,
+        delay: 3000,
       },
       slidesPerView: 1.5,
       centeredSlides: true,
@@ -37,6 +37,8 @@ function create() {
         },
         800: {
           slidesPerView: 2.5,
+          spaceBetween: 50,
+
         },
         1000: {
           slidesPerView: 4,

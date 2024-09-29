@@ -1,21 +1,30 @@
 @import '../../styles/common.scss';
 
+html > body > main > section.h1p {
+  width: 100%;
+  padding-top: 5.4rem;
+  padding-bottom: 4rem;
 
-.h1p{
-    width: 100%;
-    padding-top: 5.4rem;
-    padding-bottom: 4rem;
-    .wrap{
-        max-width: 80rem;
-        display: flex;
-        flex-direction: column;
+  > .wrap {
+    max-width: 80rem;
+    display: flex;
+    flex-direction: column;
+
+    > h1 {
+      color: $color-black;
     }
-    h1{
-        color: $color-black;
+
+    > p {
+      @extend .font-p1;
+      margin-top: 1.45rem;
+      color: rgba($color-black, 0.8);
     }
-    p{
-        @extend .font-p1;
-        margin-top: 1.45rem;
-        color: rgba($color-black, 0.8);
-    }
+  }
+}
+
+@media (max-width: $lg-screen) {
+  html > body > main > section.h1p {
+    padding-top: 3.8rem;
+    padding-bottom: 2.5rem;
+  }
 }
