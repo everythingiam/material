@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require('webpack');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: "development",
@@ -28,6 +29,7 @@ module.exports = {
   },
   plugins: [
     new FaviconsWebpackPlugin('./src/assets/icons/favicon.svg'),
+    // new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
       filename: "index.html", 
@@ -78,6 +80,7 @@ module.exports = {
       {
         test: [/\.css$/i, /\.scss$/i],
         use: [
+          // MiniCssExtractPlugin.loader,
           "style-loader",
           "css-loader",
           "sass-loader",

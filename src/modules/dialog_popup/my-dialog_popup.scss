@@ -85,10 +85,6 @@ dialog {
       flex-direction: column;
       justify-content: space-between;
 
-      h2 {
-        @extend .font-h2;
-      }
-
       .blac {
         @extend .font-p2;
         color: $color-black;
@@ -122,9 +118,7 @@ dialog {
   }
 }
 
-.no-scroll {
-  overflow: hidden;
-}
+
 
 .pop-active {
   opacity: 1;

@@ -1,21 +1,15 @@
 import './my-slider.scss';
 import Swiper from 'swiper/bundle';
 import swiperHTML from './index.html';
-import myMini_card from '../../components/my-mini_card/my-mini_card'
+import myMini_card from '../../components/my-mini_card/my-mini_card';
+import fakePosters from '../../helpers/fakePosters';
 
-const posters = [
-  myMini_card.create(),
-  myMini_card.create(),
-  myMini_card.create(),
-  myMini_card.create(),
-  myMini_card.create(),
-  myMini_card.create(),
-  myMini_card.create(),
-];
+const posters = fakePosters.map(poster => myMini_card.create(poster))
+
 
 function create() {
   const swiperComponent = document.createElement('section');
-  swiperComponent.classList.add('swiper-section');
+  swiperComponent.classList.add('swiper-poster');
   swiperComponent.innerHTML = swiperHTML;
   putPosters(swiperComponent, posters);
 

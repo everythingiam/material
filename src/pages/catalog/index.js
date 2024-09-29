@@ -7,30 +7,11 @@ import myFooter from "../../modules/footer/my-footer";
 
 import myMini_card from "../../components/my-mini_card/my-mini_card";
 import myButton from "../../UI/my-button/my-button";
+import fakePosters from "../../helpers/fakePosters";
 // import myButton from "../../UI/my-button/my-button";
 
-const posters = [
-    myMini_card.create(), 
-    myMini_card.create(), 
-    myMini_card.create(), 
-    myMini_card.create(),
-    myMini_card.create(),
-    myMini_card.create(),
-    myMini_card.create(),
-    myMini_card.create(),
-    myMini_card.create(),
-    myMini_card.create(),
-    myMini_card.create(),
-    myMini_card.create(),
-    myMini_card.create(),
-    myMini_card.create(),
-    myMini_card.create(),
-    myMini_card.create(),
-    myMini_card.create(),
-    myMini_card.create(),
-    myMini_card.create(),
-    myMini_card.create(),
-]
+const posters = fakePosters.map(poster => myMini_card.create(poster))
+console.log(posters);
 
 const body = document.querySelector('body');
 

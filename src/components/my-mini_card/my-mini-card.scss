@@ -8,6 +8,9 @@
     width: 100%;
     aspect-ratio: 1 / 1;
     border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 4%;
     transition: padding 200ms ease-in-out;
     position: relative;

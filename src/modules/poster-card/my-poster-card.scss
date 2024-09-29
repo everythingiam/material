@@ -1,7 +1,7 @@
 @import '../../styles/common.scss';
 
 .poster-card {
-  padding: 2.5rem $paddings + 1 0 $paddings;
+  padding-top: 2.5rem;
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-gap: 4rem;
@@ -10,7 +10,7 @@
 
   .right {
     display: flex;
-    height: calc(100vh - 80px - 55px - 30px);
+    height: auto;
     flex-direction: column;
     width: 100%;
     max-width: 50rem;
@@ -143,7 +143,7 @@
 @media (max-width: 1000px) {
   .poster-card {
     grid-template-columns: 1fr !important;
-    margin-bottom: 1rem !important;
+    margin-bottom: 6rem !important;
   }
   .poster-card .left {
     height: calc(75vh - 20.5vh - 30px) !important;

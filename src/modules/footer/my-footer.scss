@@ -1,71 +1,82 @@
 @import '../../styles/common.scss';
 
-
-#footer {
-  height: 40rem;
-  background-color: $color-black;
+html > body > footer#footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  background-color: $color-black;
+  padding-top: 5rem;
   padding-bottom: 1rem;
 
-  a{
-    text-decoration: none;
-    transition: $transitions;
-    &:hover{
-      color: rgba($color-white, 0.6)
+  > div.top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+    width: 100%;
+    margin-bottom: 9%;
+
+    > article {
+      > ul {
+        display: flex;
+        justify-content: space-between;
+
+        > li > a:hover {
+          color: rgba($color-white, 0.5);
+        }
+      }
+
+      > a:hover {
+        color: rgba($color-white, 0.5);
+      }
+
+      .label {
+        @extend .font-p2;
+        color: rgba($color-white, 0.5);
+        margin-bottom: 0.6rem;
+      }
+
+      .value {
+        @extend .font-p1;
+        color: $color-white;
+      }
+    }
+
+    > article.long {
+      width: 35%;
     }
   }
 
-  svg {
-    width: 98%;
-    path {
-      fill: transparent;
-      transition: fill .9s cubic-bezier(.5,0,0.5,1);
+  > svg {
+    width: 100%;
 
+    > path {
+      fill: $color-white;
+      opacity: 0.8;
+      transition: fill 1s cubic-bezier(0.7, 0, 0.7, 0.7);
     }
-  
+
     &:hover {
       path {
-      fill: $color-white;
-      opacity: 1;
-      // transition: stroke .9s cubic-bezier(.5,0,0.5,1);
-
+        fill: white !important;
+        // opacity: 0.6;
       }
     }
   }
-  .top {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 $paddings;
-  
-  }
-  article{
-      margin-top: 5rem;
-  }
-  .wrap{
-    display: flex;
-    justify-content: space-between;
-  }
-  .long{
-    width: 35%;
-  
-  }
-  .label{
-      @extend .font-p3;
-      color: rgba($color-white, 0.5);
-      margin-bottom: 0.6rem;
-  }
-  .value{
-      @extend .font-p2;
-      color: $color-white;
-  }
 }
 
-@media (max-width: 800px){
-  .top{
-    flex-direction: column;
+@media (max-width: 800px) {
+  html > body > footer#footer > div.top {
+    max-width: 54rem;
+    margin-bottom: 15%;
+
+    > article.long {
+      width: 100%;
+      max-width: 35rem;
+    }
+  }
+  html > body > footer#footer > svg > path {
+    fill: white;
+    opacity: 1;
   }
 }

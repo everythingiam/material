@@ -1,6 +1,17 @@
 @import '../../styles/common.scss';
 @import '../../../node_modules/swiper/swiper-bundle.css';
 
+.swiper-poster{
+  width: calc(100% + 72px); 
+	margin-left: -36px; 
+	margin-right: -36px; 
+
+  @media (max-width: $md-screen){
+    width: calc(100% + 32px); 
+    margin-left: -16px; 
+    margin-right: -16px; 
+  }
+}
 .swiper-slide {
   display: flex;
   justify-content: center;
@@ -62,3 +73,5 @@
 .swiper-button-prev::after {
   background-image: url(/src/assets/icons/arrow-left.svg);
 }
+
+

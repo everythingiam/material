@@ -21,12 +21,6 @@ function create() {
   myDialog_popup.setButtonAsOpener(dialogs, 'register', sidebarRegisterBtn);
   // myDialog_popup.setAsOpener(dialogs, 'forgot', forgotBtn);
 
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('.menu-toggle').addEventListener('click', () => {
-      document.querySelector('.left').classList.toggle('menu-opened');
-    });
-  });
-
   addSideBar(header);
 
   return header;

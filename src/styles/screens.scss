@@ -1,0 +1,48 @@
+/*
+Здесь всё, что касается зависимостей от ширины экрана:
+1. Паддинги у body;
+2. Отступы между компонентами;
+3. Класс элемента изображения в полную ширину экрана для мобилы.
+
+сори за !important 
+*/
+
+$xs-screen: 359px;
+$md-screen: 639px;
+$lg-screen: 1023px;
+$xl-screen: 1439px;
+
+body 
+{
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
+#header, #footer, .mail{
+	width: calc(100% + 72px); 
+	margin-left: -36px; 
+	margin-right: -36px; 
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
+@media (max-width: $md-screen) 
+{
+  body 
+  {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  #header, #footer, .mail{
+    width: calc(100% + 32px); 
+    margin-left: -16px; 
+    margin-right: -16px; 
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+

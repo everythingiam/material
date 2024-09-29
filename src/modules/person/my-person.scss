@@ -1,7 +1,8 @@
 @import '../../styles/common.scss';
 
 .person{
-  padding: 2.5rem $paddings 6rem $paddings;
+  padding-top: 2.5rem;
+  padding-bottom: 6rem;
   display: flex;
   justify-content: space-between;
   .left{
@@ -18,7 +19,6 @@
     }
   }
   h1 {
-    @extend .font-h1;
     color: $color-black;
     margin-bottom: 0.9rem;
   }

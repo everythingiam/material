@@ -1,129 +1,151 @@
+@import './screens.scss';
+
 html {
-    /* 10px */
-    font-size: 62.5%;
+  /* 10px */
+  font-size: 62.5%;
 }
 
-$fontsize-h1: 4.2rem;
-$fontsize-h1-poster: 3.2rem;
-$fontsize-h1-hero: 35rem;
-$fontsize-h2: 2.4rem;
-$fontsize-p1-hero: 2rem;
-$fontsize-p1-medium: 1.8rem;
-$fontsize-p1: 1.8rem;
-$fontsize-p2: 1.6rem;
-$fontsize-p3: 1.4rem;
-$fontsize-button: 1.4rem;
-$fontsize-filters: 1.5rem;
-$fontsize-label: 1.3rem;
-
-$fontweight-light: 300;
-$fontweight-regular: 400;
-$fontweight-medium: 500;
-$fontweight-extrabold: 800;
-
-
-
-@media (min-width: 1300px) {
-  $paddings: 10rem !default;
-  html {
-    font-size: 65%;
-  }
-}
-@media (max-width: 700px) {
-  $paddings: 10rem !default;
-  html {
-    font-size: 60%;
-  }
-}
+// @media (min-width: 1300px) {
+//   $paddings: 10rem !default;
+//   html {
+//     font-size: 65%;
+//   }
+// }
+// @media (max-width: 700px) {
+//   $paddings: 10rem !default;
+//   html {
+//     font-size: 60%;
+//   }
+// }
 
 @font-face {
-    font-family: 'TTHoves';
-    font-weight: $fontweight-light; // Light
-    src: url('/src/assets/font/TTHoves-Light.ttf') format('truetype');
-  }
-  
+  font-family: 'TTHoves Light';
+  font-weight: 300; // Light
+  src: url('/src/assets/font/TTHoves-Light.ttf') format('truetype');
+}
+
 @font-face {
   font-family: 'TTHoves';
-  font-weight: $fontweight-regular; // Regular
+  font-weight: 400; // Regular
   src: url('/src/assets/font/TTHoves-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'TTHoves';
-  font-weight: $fontweight-medium; // Medium
+  font-family: 'TTHoves Medium';
+  font-weight: 500; // Medium
   src: url('/src/assets/font/TTHoves-Medium.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'TTHoves';
-    font-weight: $fontweight-extrabold; // ExtraBold
-    src: url('/src/assets/font/TTHoves-ExtraBold.ttf') format('truetype');
+  font-family: 'TTHoves Extrabold';
+  font-weight: 800; // ExtraBold
+  src: url('/src/assets/font/TTHoves-ExtraBold.ttf') format('truetype');
 }
 
-.font-h1{
-    font-family: "TTHoves";
-    font-weight: $fontweight-medium;
-    font-size: $fontsize-h1;
+h1 {
+  font-family: 'TTHoves Medium';
+  font-size: 4.2rem;
 }
-.font-h1-poster{
-    font-family: "TTHoves";
-    font-weight: $fontweight-medium;
-    font-size: $fontsize-h1-poster;
+.font-h1-poster {
+  font-family: 'TTHoves Medium';
+  font-size: 3.2rem;
+  line-height: 107%;
+}
+.font-h1-hero {
+  font-family: 'TTHoves';
+  font-size: 3.5rem;
+}
+h2 {
+  font-family: 'TTHoves Medium';
+  font-size: 2.4rem;
+}
+.font-p1-hero {
+  font-family: 'TTHoves Light';
+  font-size: 2rem;
+}
+.font-p1-medium {
+  font-family: 'TTHoves Medium';
+  font-size: 2.2rem;
+}
+.font-p1 {
+  font-family: 'TTHoves';
+  font-size: 2rem;
+  line-height: 150%;
+}
+.font-p2 {
+  font-family: 'TTHoves';
+  font-size: 1.6rem;
+}
+.font-p3 {
+  font-family: 'TTHoves';
+  font-size: 1.4rem;
+}
+.font-button {
+  font-family: 'TTHoves';
+  font-size: 1.4rem;
+}
+.font-filters {
+  font-family: 'TTHoves';
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.font-label {
+  font-family: 'TTHoves';
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: $lg-screen) {
+  h1 {
+    font-family: 'TTHoves Medium';
+    font-size: 2.5rem;
+  }
+  .font-h1-poster {
+    font-family: 'TTHoves Medium';
+    font-size: 2.2rem;
     line-height: 107%;
-}
-.font-h1-hero{
-    font-family: "TTHoves";
-    font-weight: $fontweight-regular;
-    font-size: $fontsize-h1-hero;
-}
-.font-h2{
-    font-family: "TTHoves";
-    font-weight: $fontweight-medium;
-    font-size: $fontsize-h2;
-}
-.font-p1-hero{
-    font-family: "TTHoves";
-    font-weight: $fontweight-light;
-    font-size: $fontsize-p1-hero;
-}
-.font-p1-medium{
-    font-family: "TTHoves";
-    font-weight: $fontweight-medium;
-    font-size: $fontsize-p1-medium;
-}
-.font-p1{
-    font-family: "TTHoves";
-    font-weight: $fontweight-regular;
-    font-size: $fontsize-p1;
+  }
+  .font-h1-hero {
+    font-family: 'TTHoves';
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-family: 'TTHoves Medium';
+    font-size: 1.6rem;
+  }
+  .font-p1-hero {
+    font-family: 'TTHoves Light';
+    font-size: 2.6rem;
+  }
+  .font-p1-medium {
+    font-family: 'TTHoves Medium';
+    font-size: 1.5rem;
+  }
+  .font-p1 {
+    font-family: 'TTHoves';
+    font-size: 1.5rem;
     line-height: 150%;
-}
-.font-p2{
-    font-family: "TTHoves";
-    font-weight: $fontweight-regular;
-    font-size: $fontsize-p2;
-}
-.font-p3{
-    font-family: "TTHoves";
-    font-weight: $fontweight-regular;
-    font-size: $fontsize-p3;
-}
-.font-button{
-    font-family: "TTHoves";
-    font-weight: $fontweight-regular;
-    font-size: $fontsize-button;
-}
-.font-filters{
-    font-family: "TTHoves";
-    font-weight: $fontweight-regular;
-    font-size: $fontsize-filters;
+  }
+  .font-p2 {
+    font-family: 'TTHoves';
+    font-size: 1.4rem;
+  }
+  .font-p3 {
+    font-family: 'TTHoves';
+    font-size: 1.2rem;
+  }
+  .font-button {
+    font-family: 'TTHoves';
+    font-size: 1.3rem;
+  }
+  .font-filters {
+    font-family: 'TTHoves';
+    font-size: 1.2rem;
     text-transform: uppercase;
-}
-.font-label{
-    font-family: "TTHoves";
-    font-weight: $fontweight-regular;
-    font-size: $fontsize-label;
+  }
+  .font-label {
+    font-family: 'TTHoves';
+    font-size: 1.1rem;
     text-transform: uppercase;
+  }
 }
-
-
-

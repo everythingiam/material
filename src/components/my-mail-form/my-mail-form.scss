@@ -10,13 +10,6 @@
     padding: 4rem 5rem;
 
     h2{
-        @extend .font-h2;
         color: $color-black;
     }
-
-}
-form{
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
 }

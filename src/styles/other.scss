@@ -1,4 +1,8 @@
-$paddings: 3rem;
 $roundings: 1rem;
 $transitions: 0.2s ease;
+
+a
+{
+    transition: $transitions;
+}
 

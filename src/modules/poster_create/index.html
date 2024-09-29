@@ -1,6 +1,13 @@
+<aside class="left">
+  <div class="spans">
+    Размер картинки: <span class="fileSize">2360х3526</span> px
+    <br />Соотношение сторон (см):
+    <span class="pictureSize">40х50 | 50х70 | 60х80</span>
+  </div>
+</aside>
 <div class="right">
   <form action="">
-    <h2>Добавить постер (компонент в разработке)</h2>
+    <h2>Добавить постер</h2>
     <ul class="fields">
       <li class="text">
         <label for="name">Название</label>
@@ -9,14 +16,24 @@
       </li>
       <li class="text">
         <label for="name">Цена</label>
-        <input type="text" name="name" placeholder="Цена" />
+        <input
+          type="text"
+          name="name"
+          placeholder="Цена"
+          style="max-width: 50%"
+        />
         <span class="error-message"></span>
       </li>
       <li class="textarea">
         <label for="name">Описание</label>
-        <input type="textarea" name="name" placeholder="Введите текст" />
+        <textarea
+          placeholder="Введите текст"
+          name="description"
+          id=""
+        ></textarea>
         <span class="error-message"></span>
       </li>
     </ul>
+    <button class="button normal custom">Выложить постер</button>
   </form>
 </div>

@@ -16,7 +16,7 @@ function create(poster_img) {
   const cardCont = frame.querySelector('.card-container');
   cardCont.appendChild(picture);
 
-  addTilt(cardCont);
+  addTilt(frame.querySelector('.tilt-container'));
   return frame;
 }
 
