@@ -73,6 +73,9 @@
     a {
       color: $color-accent;
     }
+    h2{
+      @extend .font-h2-mini
+    }
 
     .product-card-container {
       padding: 3%;

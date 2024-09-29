@@ -31,8 +31,8 @@ function addSideBar(header) {
   const sidebar = header.querySelector('.sidebar');
 
   icon.addEventListener('click', () => {
-    sidebar.style.display = 'flex';
-    document.body.classList.add('no-scroll');
+    sidebar.classList.toggle('active');
+    icon.classList.toggle('active');
   });
 
   document.addEventListener('click', (event) => {
