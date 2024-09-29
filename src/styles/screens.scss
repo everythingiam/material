@@ -12,38 +12,48 @@ $md-screen: 639px;
 $lg-screen: 1023px;
 $xl-screen: 1439px;
 
-body 
-{
+body {
   margin-left: auto;
   margin-right: auto;
   padding-left: 36px;
   padding-right: 36px;
 }
 
-html > body > header#header, 
-html > body > footer#footer, .mail{
-	width: calc(100% + 72px); 
-	margin-left: -36px; 
-	margin-right: -36px; 
+html > body > section.gallery {
+  width: calc(100% + 72px);
+  margin-left: -36px;
+  margin-right: -36px;
+}
+
+html > body > header#header,
+html > body > footer#footer,
+.mail {
+  width: calc(100% + 72px);
+  margin-left: -36px;
+  margin-right: -36px;
   padding-left: 36px;
   padding-right: 36px;
 }
 
-@media (max-width: $md-screen) 
-{
-  body 
-  {
+@media (max-width: $md-screen) {
+  body {
     padding-left: 16px;
     padding-right: 16px;
   }
 
-  #header, #footer, .mail{
-    width: calc(100% + 32px); 
-    margin-left: -16px; 
-    margin-right: -16px; 
+  html > body > section.gallery {
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+
+  html > body > header#header,
+  html > body > footer#footer,
+  .mail {
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    margin-right: -16px;
     padding-left: 16px;
     padding-right: 16px;
   }
 }
-
-

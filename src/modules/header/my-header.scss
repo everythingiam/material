@@ -54,7 +54,7 @@ html > body > header#header {
         transition: $transitions;
 
         &.active {
-          max-height: 500px; 
+          max-height: 500px;
           opacity: 1;
           visibility: visible;
           transition: max-height 0.2s ease-in, opacity 0.3s ease-in;
@@ -241,5 +241,13 @@ html > body > header#header {
 @media (min-width: 1001px) {
   html > body > header#header > .left > nav > ul.sidebar {
     display: none !important;
+  }
+}
+
+@media (max-width: $md-screen) {
+  html > body > header#header > .left > nav > ul.sidebar > li > a,
+  html > body > header#header > .left > nav > ul.sidebar > li.buttons
+  {
+    padding-left: 1.6rem;
   }
 }
