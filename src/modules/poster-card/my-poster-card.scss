@@ -1,6 +1,6 @@
 @import '../../styles/common.scss';
 
-.poster-card {
+html > body > main > section.poster-card {
   padding-top: 2.5rem;
   display: grid;
   grid-template-columns: 3fr 2fr;
@@ -8,7 +8,7 @@
   margin-bottom: 8.5rem;
   position: relative;
 
-  .right {
+  > .right {
     display: flex;
     height: auto;
     flex-direction: column;
@@ -16,136 +16,170 @@
     max-width: 50rem;
     margin: 0 auto;
 
-    header {
+    > header {
       margin-bottom: 3rem;
-      a {
-        @extend .font-label;
-        color: rgba($color-black, 0.5);
-        font-size: 1.45rem;
-        text-decoration: none;
-      }
 
-      nav {
+      > nav {
         padding-bottom: 2rem;
+
+        > a {
+          @extend .font-label;
+          color: rgba($color-black, 0.5);
+          font-size: 1.45rem;
+        }
       }
 
-      .main {
+      > .main {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 3rem;
 
-        label {
+        > h1 {
+          @extend .font-h1-poster;
+          max-width: 70%;
+          color: $color-black;
+        }
+
+        > input {
+          display: none;
+        }
+
+        > label {
           width: 2.4rem;
           height: 2.4rem;
           position: relative;
           cursor: pointer;
-        }
 
-        label::before {
-          content: '';
-          background-image: url(/src/assets/icons/share.svg);
-          background-size: contain;
-          background-repeat: no-repeat;
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          left: 0;
-        }
-        input {
-          display: none;
-        }
-        h1 {
-          @extend .font-h1-poster;
-          max-width: 70%;
-          color: $color-black;
-          margin-bottom: 3rem;
+          &:hover {
+            > svg {
+              path {
+                transition: $transitions;
+              }
+
+              &:hover {
+                path {
+                  stroke: $color-accent;
+                }
+              }
+            }
+          }
         }
       }
-      .line {
+
+      > .line {
         height: 0.1rem;
         width: 100%;
         background-color: rgba($color-black, 0.15);
       }
     }
 
-    li {
-      list-style-type: none;
-    }
-    .big {
-      margin-top: -2rem;
-    }
-    ul {
+    > ul {
       display: flex;
       flex-direction: column;
       gap: 3.5rem;
-    }
-    .price-des {
-      display: flex;
-      justify-content: space-between;
-      .price {
-        @extend .font-p1-medium;
-        color: $color-black;
-        font-size: 2.4rem;
-      }
-      .designer {
-        @extend .font-p2;
-        color: $color-black;
-        text-decoration: underline;
-        cursor: pointer;
-        position: relative; // Добавьте это
-        top: -0.6rem; // И это
-        &:hover {
-          color: $color-accent;
-        }
-      }
-    }
-    .set {
-      p {
-        @extend .font-label;
-        color: rgba($color-black, 0.5);
-        margin-bottom: 1rem;
-      }
-    }
-    .sizes {
-      display: flex;
-      gap: 1.5rem;
 
-      button {
-        max-height: 4.3rem;
-        background-color: rgba($color-black, 0.2);
-        color: white;
+      > li.price-des {
+        display: flex;
+        justify-content: space-between;
 
-        .button.active {
-          background-color: $color-accent;
-        }
-        &:focus {
-          outline: none;
-        }
-        &:hover {
-          background-color: rgba($color-black, 0.4);
+        > .set {
+          > p {
+            @extend .font-label;
+            color: rgba($color-black, 0.5);
+            margin-bottom: 1rem;
+          }
+
+          > span.price {
+            @extend .font-p1-medium;
+            color: $color-black;
+            font-size: 2.4rem;
+          }
+
+          > .designer {
+            @extend .font-p2;
+            color: $color-black;
+            text-decoration: underline;
+            cursor: pointer;
+            position: relative;
+            top: -0.3rem;
+
+            &:hover {
+              color: $color-accent;
+            }
+          }
         }
       }
+
+      > li {
+        > .set {
+          > p {
+            @extend .font-label;
+            color: rgba($color-black, 0.5);
+            margin-bottom: 1rem;
+          }
+
+          > ul {
+            display: flex;
+            gap: 1.5rem;
+
+            > li {
+              width: 100%;
+              > button {
+                max-height: 4.3rem;
+                background-color: rgba($color-black, 0.2);
+                color: white;
+
+                &.active {
+                  background-color: $color-accent;
+                }
+                &:focus {
+                  outline: none;
+                }
+                &:hover {
+                  background-color: rgba($color-black, 0.4);
+                }
+                &.active {
+                  background-color: $color-accent;
+                }
+              }
+            }
+          }
+
+          > span.description {
+            @extend .font-p2;
+          }
+        }
+      }
+      > .big {
+        margin-top: -2rem;
+      }
     }
-    .description {
-      @extend .font-p2;
-    }
-  }
-  .active {
-    background-color: $color-accent !important;
   }
 }
-.righ {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
 
-@media (max-width: 1000px) {
-  .poster-card {
-    grid-template-columns: 1fr !important;
-    margin-bottom: 6rem !important;
+@media (max-width: $lg-screen) {
+  html > body > main > section.poster-card {
+    grid-template-columns: 1fr;
+    margin-bottom: 6rem;
   }
-  .poster-card .left {
-    height: calc(75vh - 20.5vh - 30px) !important;
+
+  html > body > main > section.poster-card > .right > header {
+    margin-bottom: 2.5rem;
+
+    > .main {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  html > body > main > section.poster-card > .right > ul > .big{
+    margin-top: -1.5rem;
+  }
+
+  html > body > main > section.poster-card > .right > ul > li > .set > ul {
+    gap: 0.8rem;
+  }
+
+  html > body > main > section.poster-card > .right > ul {
+    gap: 3rem;
   }
 }

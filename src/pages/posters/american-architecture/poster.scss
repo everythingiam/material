@@ -1,8 +1,31 @@
+@import '../../../styles/common.scss';
 
-.h1p, .swiper-section, .separator{
-  background-color: #F3F3F3;
+.h1p,
+.swiper-poster {
+  background-color: #f3f3f3;
 }
-.separator{
-  height: 8.5rem;
-  width: 100%;
+html > body > main > section.swiper-poster {
+  padding-bottom: 8rem;
+}
+
+html > body > main > section.h1p {
+  width: calc(100% + 72px);
+  margin-left: -36px;
+  margin-right: -36px;
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
+@media (max-width: $md-screen) {
+  html > body > main > section.swiper-poster {
+    padding-bottom: 5rem;
+  }
+
+  html > body > main > section.h1p {
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    margin-right: -16px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }

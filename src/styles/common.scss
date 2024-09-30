@@ -1,11 +1,14 @@
-@import './reset.scss';
-@import './colors.scss';
-@import './other.scss';
 @import './typography.scss';
 @import './screens.scss';
+@import './variables.scss';
 
 body {
   display: flex;
   flex-direction: column;
   background-color: $color-white;
+}
+
+html {
+  /* 10px */
+  font-size: 62.5%;
 }

@@ -1,3 +1,4 @@
+import '../../styles/reset.scss';
 import '../../styles/common.scss';
 
 import myHeader from '../../modules/header/my-header';

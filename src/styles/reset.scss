@@ -1,3 +1,4 @@
+@import './variables.scss';
 //Ресет стилей
 
 * 
@@ -17,6 +18,11 @@
 a, a:link, a:visited  
 {
     text-decoration: none;
+}
+
+a
+{
+    transition: $transitions;
 }
 
 a:hover  

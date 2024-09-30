@@ -3,7 +3,7 @@ import myPosterFrame from '../../components/my-poster-frame/my-poster-frame';
 import './my-poster-card.scss';
 
 function create() {
-  const card = document.createElement('article');
+  const card = document.createElement('section');
   card.classList.add('poster-card');
   card.innerHTML = cardHTML;
 
