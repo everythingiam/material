@@ -1,6 +1,6 @@
 @import '../../styles/common.scss';
 
-.poster-create {
+html > body > main > section.poster-create {
   padding-top: 2.5rem;
   display: grid;
   grid-template-columns: 3fr 2fr;
@@ -8,12 +8,28 @@
   margin-bottom: 8.5rem;
   position: relative;
 
-  .poster-left{
-    background: linear-gradient(#EDEDED, #CCCCCC);
-    display: grid;
+  > .left {
+    > .poster-left {
+      background: linear-gradient(#ededed, #cccccc);
+
+      > .tilt-container > .card-container > picture > img.empty {
+        width: 40%;
+        height: 40%;
+      }
+    }
+
+    > .spans {
+      @extend .font-p3;
+      color: rgba($color-black, 0.5);
+      margin-top: 1.6rem;
+
+      > span {
+        color: $color-black;
+      }
+    }
   }
 
-  .right {
+  > .right {
     display: flex;
     height: auto;
     flex-direction: column;
@@ -21,32 +37,41 @@
     max-width: 50rem;
     margin: 0 auto;
 
-    form{
+    > form {
       display: flex;
       flex-direction: column;
     }
   }
+}
 
-  .poster-left{
-    height: calc(100vh - 22vh - 30px);
-  }
-  .spans{
-    @extend .font-p3;
-    color: rgba($color-black, 0.5);
-    margin-top: 1.6rem;
+@media (max-width: $lg-screen) {
+  html > body > main > section.poster-create {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    row-gap: 2rem;
+    margin-bottom: 4rem;
 
-    span{
-      color: $color-black;
+    > .left {
+      grid-row: 1;
+    }
+
+    > .right {
+      grid-row: 2;
     }
   }
 }
 
-@media (max-width: 1000px) {
-  .poster-create {
-    grid-template-columns: 1fr !important;
-    margin-bottom: 6rem !important;
-  }
-  .poster-create .left {
-    height: calc(75vh - 20.5vh - 30px) !important;
+@media (max-width: $md-screen) {
+  html
+    > body
+    > main
+    > section.poster-create
+    > .left
+    > .poster-left
+    > .tilt-container
+    > .card-container
+    > picture
+    > img.empty {
+    width: 60%;
   }
 }

@@ -34,13 +34,6 @@ function addSideBar(header) {
     sidebar.classList.toggle('active');
     icon.classList.toggle('active');
   });
-
-  document.addEventListener('click', (event) => {
-    if (!sidebar.contains(event.target) && !icon.contains(event.target)) {
-      sidebar.style.display = 'none';
-      document.body.classList.remove('no-scroll');
-    }
-  });
 }
 
 export default {
