@@ -1,0 +1,5 @@
+@import '../../styles/common.scss';
+
+html > body > header#header > .left > nav > ul.wide > li:first-child > a {
+  color: $color-accent;
+}

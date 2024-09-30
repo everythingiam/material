@@ -1,6 +1,6 @@
 @import '../../styles/common.scss';
 
-dialog {
+html > body > main > dialog {
   background-color: rgba(97, 97, 97, 0.5);
   position: fixed;
   inset: 0;
@@ -10,17 +10,17 @@ dialog {
   overscroll-behavior: contain;
   justify-content: center;
   transition: all 0.5s ease;
-  display: flex;
+  display: block;
+
   opacity: 0;
   pointer-events: none;
-  align-items: center;
   backdrop-filter: blur(15px);
   width: 100%;
   height: auto;
   border: 0;
-  padding: 5rem 1rem;
+  padding: 7% 1rem;
 
-  .dialog-popup {
+  > .dialog-popup {
     width: 100%;
     max-width: 96rem;
     background-color: $color-white;
@@ -29,8 +29,14 @@ dialog {
     display: none;
     min-height: 54rem;
     grid-template-columns: repeat(2, 1fr);
+    margin-left: auto;
+    margin-right: auto;
 
-    .left-side {
+    &.active {
+      display: grid;
+    }
+
+    > .left-side {
       background-size: cover;
       background-position: center;
       height: 100%;
@@ -40,7 +46,16 @@ dialog {
       position: relative;
       overflow: hidden;
 
-      img {
+      > .close {
+        width: 4rem;
+        height: 4rem;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        margin: 4rem;
+      }
+
+      > picture > img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -53,37 +68,54 @@ dialog {
         object-fit: cover;
       }
 
-      p {
+      > p {
         @extend .font-p2;
         color: $color-white;
         position: absolute;
         margin: 4rem;
-      }
-      span {
-        @extend .font-p2;
-        transition: 200ms;
-        cursor: pointer;
-        text-decoration: underline;
-        color: $color-white;
 
-        &:hover {
-          color: rgba($color-white, 0.6);
+        > span {
+          @extend .font-p2;
+          transition: 200ms;
+          cursor: pointer;
+          text-decoration: underline;
+          color: $color-white;
+
+          &:hover {
+            color: rgba($color-white, 0.6);
+          }
         }
       }
     }
 
-    .password-wrap {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      width: 100%;
-    }
-
-    .right-side {
+    > .right-side {
       padding: 4rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
+      > .or-google {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        > p {
+          @extend .font-label;
+          align-self: center;
+          color: rgba($color-black, 0.5);
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      > form.register {
+        min-height: 41rem;
+      }
+
+      > form.register > ul.fields > .password-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        width: 100%;
+      }
 
       .blac {
         @extend .font-p2;
@@ -98,41 +130,58 @@ dialog {
           color: rgba($color-black, 0.6);
         }
       }
-
-      .or-google {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        p {
-          @extend .font-label;
-          align-self: center;
-          color: rgba($color-black, 0.5);
-          margin-bottom: 1.5rem;
-        }
-      }
     }
   }
-
-  .active {
-    display: grid;
-  }
 }
-
-
 
 .pop-active {
   opacity: 1;
   pointer-events: all;
 }
 
-.register{
-  min-height: 41rem;
-}
-@media (max-width: 730px) {
-  .dialog-popup {
-    grid-template-columns: 1fr !important;
+@media (max-width: $xl-screen) {
+  html > body > main > dialog {
+    padding: 5% 1rem;
   }
-  .left-side {
-    height: 35rem !important;
+}
+@media (max-width: $lg-screen) {
+  html > body > main > dialog > .dialog-popup > .right-side {
+    padding: 3rem;
+  }
+
+  html
+    > body
+    > main
+    > dialog
+    > .dialog-popup
+    > .right-side
+    > form.register
+    > ul.fields
+    > .password-wrap {
+    gap: 1rem;
+  }
+}
+@media (max-width: $md-screen) {
+  html > body > main > dialog {
+    padding: 0;
+
+    > .dialog-popup {
+      grid-template-columns: 1fr;
+
+      > .left-side {
+        height: 35rem;
+
+        > .close {
+          right: 0;
+        }
+      }
+      > .right-side {
+        padding: 3rem 2rem;
+
+        > form.register {
+          min-height: 37rem;
+        }
+      }
+    }
   }
 }

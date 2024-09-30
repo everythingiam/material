@@ -41,6 +41,12 @@ function addCloseLogic(popupSystem) {
     }
   });
 
+  popupSystem.querySelectorAll(".close").forEach((btn) => {
+    btn.addEventListener('click', () => {
+      closeAll(popupSystem);
+    })
+  })
+
   popupSystem.querySelectorAll('.dialog-popup').forEach((dialog) => {
     dialog.addEventListener('click', (event) => event.stopPropagation());
   });
@@ -76,13 +82,13 @@ function setLinkAsOpener(popupSystem, type, link) {
 
 function openPopup(popupSystem, type) {
   popupSystem.classList.add('pop-active');
-  document.body.classList.add('no-scroll');
+  document.body.style.overflow = 'hidden';
   popupSystem.querySelector(`.${type}`).classList.add('active');
 }
 
 function closeAll(popupSystem) {
   popupSystem.classList.remove('pop-active');
-  document.body.classList.remove('no-scroll');
+  document.body.style.overflow = 'auto';
   popupSystem.querySelectorAll('.dialog-popup.active').forEach((dialog) => {
     dialog.classList.remove('active');
   });

@@ -1,4 +1,21 @@
 <div class="left-side">
+  <button class="close">
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M20.3955 20.1135L4.43872 3.88623M20.3955 3.88623L4.43872 20.1135"
+        stroke="#FAFAFA"
+        stroke-width="1.19177"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </button>
   <picture>
     <source
       media="(min-width: 1200px)"
@@ -18,12 +35,24 @@
     <ul class="fields">
       <li class="text">
         <label for="name">Почта или никнейм</label>
-        <input type="text" name="name" placeholder="Имя или никнейм" required />
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Имя или никнейм"
+          required
+        />
         <span class="error-message"></span>
       </li>
       <li class="text">
         <label for="password">Пароль</label>
-        <input type="password" name="password" placeholder="Пароль" required />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Пароль"
+          required
+        />
         <span class="error-message"></span>
       </li>
     </ul>

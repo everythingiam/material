@@ -26,6 +26,31 @@ html > body > main > section.poster-card {
           @extend .font-label;
           color: rgba($color-black, 0.5);
           font-size: 1.45rem;
+
+          &::before {
+            content: '';
+            background-image: url('../../assets/icons/arrow-left.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            vertical-align: middle;
+            margin-right: 5px;
+            margin-left: 3px;
+            width: 19px;
+            height: 20px;
+            display: inline-block;
+            opacity: 0.5;
+            transition: $transitions;
+          }
+
+          &:hover {
+            color: rgba($color-black, 0.75);
+            
+            &::before {
+              margin-right: 8px;
+              margin-left: 0;
+              opacity: 0.75;
+            }
+          }
         }
       }
 
@@ -108,6 +133,12 @@ html > body > main > section.poster-card {
             }
           }
         }
+
+        > .set:last-child {
+          p {
+            text-align: right;
+          }
+        }
       }
 
       > li {
@@ -171,7 +202,7 @@ html > body > main > section.poster-card {
     }
   }
 
-  html > body > main > section.poster-card > .right > ul > .big{
+  html > body > main > section.poster-card > .right > ul > .big {
     margin-top: -1.5rem;
   }
 

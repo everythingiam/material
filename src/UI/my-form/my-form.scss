@@ -6,29 +6,29 @@ form {
   width: 100%;
   gap: 2.5rem;
 
-  > ul {
+   ul {
     display: flex;
     flex-direction: column;
     gap: 1.4rem;
     list-style: none;
 
-    > li {
+     li, .text {
       display: flex;
       flex-direction: column;
 
-      > label {
+       label {
         @extend .font-label;
         color: rgba($color-black, 0.5);
         margin-bottom: 0.8rem;
         text-transform: uppercase;
       }
 
-      > textarea {
+       textarea {
         resize: none;
         min-height: 9rem;
       }
 
-      > input,
+       input,
       textarea {
         @extend .font-p3;
         padding: 1.3rem 1.6rem;
@@ -59,7 +59,7 @@ form {
         }
       }
 
-      > span.error-message {
+       span.error-message {
         @extend .font-p3;
         font-size: 1.2rem;
         color: #e54e1f;
@@ -73,13 +73,13 @@ form {
   form{ 
     gap: 1.8rem;
 
-    > ul {
+     ul {
       gap: 1rem;
     }
   }
 
-  form > ul > li > input, 
-  form > ul > li textarea {
+  input, 
+  textarea {
     padding: 1.2rem 1.5rem;
   }
 }
